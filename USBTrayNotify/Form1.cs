@@ -3,6 +3,7 @@ using System;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.IO;
 using System.Runtime.InteropServices;
 using System.Threading;
@@ -24,15 +25,17 @@ namespace USBTrayNotify
         private bool StartWithWindows;
         private bool StartMenuShorts;
 
-        public Form1()
-        {
-            InitializeComponent();
-        }
 
         //Border
         protected override void OnPaint(PaintEventArgs e)
         {
-            ControlPaint.DrawBorder(e.Graphics, ClientRectangle, Color.DarkGray, ButtonBorderStyle.Solid);
+            //ControlPaint.DrawBorder(e.Graphics, ClientRectangle, Color.DarkGray, ButtonBorderStyle.Solid);
+            ControlPaint.DrawBorder(e.Graphics, this.ClientRectangle, Color.DarkGray, 1, ButtonBorderStyle.Solid, Color.DarkGray, 1, ButtonBorderStyle.Solid, Color.DarkGray, 1, ButtonBorderStyle.Solid, Color.DarkGray, 1, ButtonBorderStyle.Solid);
+        }
+
+        public Form1()
+        {
+            InitializeComponent();
         }
 
         //Form Load
@@ -67,12 +70,12 @@ namespace USBTrayNotify
                 Hide();
             }
         }
+
         public void ToggleForm()
         {
             Show();
             WindowState = FormWindowState.Normal;
         }
-
         private void notifyIconConnected_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -92,6 +95,21 @@ namespace USBTrayNotify
             }
             if (e.Button == MouseButtons.Right)
             {
+                return;
+            }
+        }
+        private void showHideToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Normal)
+            {
+                Hide();
+                WindowState = FormWindowState.Minimized;
+                return;
+            }
+            if (WindowState == FormWindowState.Minimized)
+            {
+                Show();
+                WindowState = FormWindowState.Normal;
                 return;
             }
         }
@@ -131,6 +149,19 @@ namespace USBTrayNotify
             else
             {
                 Location = Properties.USBTrayNotify.Default.Form1Location;
+            }
+        }
+        //Minimize on taskbar icon click when active
+        const int WS_MINIMIZEBOX = 0x20000;
+        const int CS_DBLCLKS = 0x8;
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams cp = base.CreateParams;
+                cp.Style |= WS_MINIMIZEBOX;
+                cp.ClassStyle |= CS_DBLCLKS;
+                return cp;
             }
         }
 
@@ -493,10 +524,11 @@ namespace USBTrayNotify
 
 
         //About
+
+        About _form = new About();
         private void pictureBoxAbout_Click(object sender, EventArgs e)
         {
-            About form = new About();
-            form.Show();
+            _form.Show();
         }
 
 
@@ -607,7 +639,7 @@ namespace USBTrayNotify
             }
         }
 
-  
+
         //Mouse hover
         private void pictureBoxMin_MouseEnter(object sender, EventArgs e)
         {
@@ -643,6 +675,18 @@ namespace USBTrayNotify
         private void pictureBoxAbout_MouseLeave(object sender, EventArgs e)
         {
             pictureBoxAbout.Image = global::USBTrayNotify.Properties.Resources.USBTrayNotifyAbout;
+        }
+
+        private void showHideToolStripMenuItem_MouseEnter(object sender, EventArgs e)
+        {
+            showHideToolStripMenuItem.Image = global::USBTrayNotify.Properties.Resources.ShowHideHov;
+            pictureBoxMin.Image = global::USBTrayNotify.Properties.Resources.USBTrayNotifyMinFormHov;
+        }
+
+        private void showHideToolStripMenuItem_MouseLeave(object sender, EventArgs e)
+        {
+            showHideToolStripMenuItem.Image = global::USBTrayNotify.Properties.Resources.ShowHide;
+            pictureBoxMin.Image = global::USBTrayNotify.Properties.Resources.USBTrayNotifyMinForm;
         }
     }
 

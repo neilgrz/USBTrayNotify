@@ -128,6 +128,8 @@
     <None Include="Icons\form\USBTrayNotifyMinFormHov.png" />
     <None Include="Icons\form\USBTrayNotifyCloseFormBgHov.png" />
     <None Include="Icons\form\USBTrayNotifyAboutHov.png" />
+    <None Include="Icons\form\ShowHide.png" />
+    <None Include="Icons\form\ShowHideHov.png" />
     <Content Include="USBconnectedNC.ico" />
     <None Include="USBLogView\USBLogView.cfg" />
     <None Include="USBLogView\USBLogView.exe" />

@@ -89,6 +89,26 @@ namespace USBTrayNotify.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ShowHide {
+            get {
+                object obj = ResourceManager.GetObject("ShowHide", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ShowHideHov {
+            get {
+                object obj = ResourceManager.GetObject("ShowHideHov", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap USBconnected {
             get {
                 object obj = ResourceManager.GetObject("USBconnected", resourceCulture);

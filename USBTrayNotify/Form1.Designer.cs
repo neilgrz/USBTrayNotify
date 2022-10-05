@@ -33,6 +33,7 @@
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.notifyIconDisconnected = new System.Windows.Forms.NotifyIcon(this.components);
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.showHideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.notifyIconConnected = new System.Windows.Forms.NotifyIcon(this.components);
             this.notifyIconUnknown = new System.Windows.Forms.NotifyIcon(this.components);
@@ -88,10 +89,22 @@
             this.contextMenuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.showHideToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(136, 44);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(204, 84);
             this.contextMenuStrip1.Text = "USBTrayNotify";
+            // 
+            // showHideToolStripMenuItem
+            // 
+            this.showHideToolStripMenuItem.BackColor = System.Drawing.SystemColors.Control;
+            this.showHideToolStripMenuItem.Image = global::USBTrayNotify.Properties.Resources.ShowHide;
+            this.showHideToolStripMenuItem.Name = "showHideToolStripMenuItem";
+            this.showHideToolStripMenuItem.Size = new System.Drawing.Size(203, 40);
+            this.showHideToolStripMenuItem.Text = "Show/Hide";
+            this.showHideToolStripMenuItem.Click += new System.EventHandler(this.showHideToolStripMenuItem_Click);
+            this.showHideToolStripMenuItem.MouseEnter += new System.EventHandler(this.showHideToolStripMenuItem_MouseEnter);
+            this.showHideToolStripMenuItem.MouseLeave += new System.EventHandler(this.showHideToolStripMenuItem_MouseLeave);
             // 
             // exitToolStripMenuItem
             // 
@@ -100,7 +113,7 @@
             this.exitToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlText;
             this.exitToolStripMenuItem.Image = global::USBTrayNotify.Properties.Resources.USBTrayNotifyCloseFormBg;
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(135, 40);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(203, 40);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.MenuExit_Click);
             this.exitToolStripMenuItem.MouseEnter += new System.EventHandler(this.pictureBoxCloseFormBg_MouseEnter);
@@ -461,6 +474,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.CheckBox checkBoxStartMenuShorts;
         private System.IO.FileSystemWatcher fileSystemWatcherAlreadyRunning;
+        private System.Windows.Forms.ToolStripMenuItem showHideToolStripMenuItem;
     }
 }
 
