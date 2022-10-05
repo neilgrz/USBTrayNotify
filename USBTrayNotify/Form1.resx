@@ -139,9 +139,6 @@
         z6P/E0p68LelKD4BPwyRy0TpkokAAAAASUVORK5CYII=
 </value>
   </data>
-  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEA8PAAAAEAIAAoogMAFgAAACgAAADwAAAA4AEAAAEAIAAAAAAAAIQDAMMOAADDDgAAAAAAAAAA
@@ -4117,7 +4114,7 @@
 </value>
   </data>
   <metadata name="notifyIconDisconnected.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>427, 17</value>
+    <value>680, 17</value>
   </metadata>
   <metadata name="contextMenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>971, 17</value>
@@ -8097,7 +8094,7 @@
 </value>
   </data>
   <metadata name="notifyIconConnected.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>162, 17</value>
+    <value>415, 17</value>
   </metadata>
   <data name="notifyIconConnected.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -12074,7 +12071,7 @@
 </value>
   </data>
   <metadata name="notifyIconUnknown.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>718, 17</value>
+    <value>162, 17</value>
   </metadata>
   <data name="notifyIconUnknown.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

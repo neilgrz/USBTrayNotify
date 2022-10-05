@@ -624,12 +624,14 @@ namespace USBTrayNotify
         private void pictureBoxCloseFormBg_MouseEnter(object sender, EventArgs e)
         {
             pictureBoxCloseFormBg.Image = global::USBTrayNotify.Properties.Resources.USBTrayNotifyCloseFormBgHov;
+            exitToolStripMenuItem.Image = global::USBTrayNotify.Properties.Resources.USBTrayNotifyCloseFormBgHov;
             exitToolStripMenuItem1.Image = global::USBTrayNotify.Properties.Resources.USBTrayNotifyCloseFormBgHov;
         }
 
         private void pictureBoxCloseFormBg_MouseLeave(object sender, EventArgs e)
         {
             pictureBoxCloseFormBg.Image = global::USBTrayNotify.Properties.Resources.USBTrayNotifyCloseFormBg;
+            exitToolStripMenuItem.Image = global::USBTrayNotify.Properties.Resources.USBTrayNotifyCloseFormBg;
             exitToolStripMenuItem1.Image = global::USBTrayNotify.Properties.Resources.USBTrayNotifyCloseFormBg;
         }
 
