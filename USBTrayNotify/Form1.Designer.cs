@@ -241,10 +241,10 @@
             // pictureBoxStatus
             // 
             this.pictureBoxStatus.Image = global::USBTrayNotify.Properties.Resources.USBunknown;
-            this.pictureBoxStatus.Location = new System.Drawing.Point(7, 7);
+            this.pictureBoxStatus.Location = new System.Drawing.Point(2, 4);
             this.pictureBoxStatus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBoxStatus.Name = "pictureBoxStatus";
-            this.pictureBoxStatus.Size = new System.Drawing.Size(75, 74);
+            this.pictureBoxStatus.Size = new System.Drawing.Size(72, 72);
             this.pictureBoxStatus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBoxStatus.TabIndex = 5;
             this.pictureBoxStatus.TabStop = false;
@@ -364,12 +364,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.ClientSize = new System.Drawing.Size(845, 454);
+            this.Controls.Add(this.pictureBoxStatus);
             this.Controls.Add(this.checkBoxStartMenuShorts);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBoxCloseFormBg);
             this.Controls.Add(this.pictureBoxMin);
-            this.Controls.Add(this.pictureBoxStatus);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.labelSelectedPrefix);
             this.Controls.Add(this.labelTitle);
