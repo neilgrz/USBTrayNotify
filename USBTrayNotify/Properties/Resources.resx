@@ -136,11 +136,20 @@
   <data name="USBTrayNotifyCloseFormBg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\form\USBTrayNotifyCloseFormBg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="USBTrayNotifyClear" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\form\USBTrayNotifyClear.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="USBdisconnected" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\form\USBdisconnected.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="USBconnectedSM" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\USBconnectedSM.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="USBTrayNotifyMinForm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\form\USBTrayNotifyMinForm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="USBunknown" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\form\USBunknown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="USBTrayNotifyAbout" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\form\USBTrayNotifyAbout.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -151,25 +160,25 @@
   <data name="readme" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\USBLogView\readme.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>
-  <data name="USBLogView" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\USBLogView\USBLogView.exe;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="USBunknownNC" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\USBunknownNC.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="USBTrayNotifyMinForm" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icons\form\USBTrayNotifyMinForm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="USBconnectedNC" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\USBconnectedNC.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="USBunknown" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icons\form\USBunknown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="USBLogView" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\USBLogView\USBLogView.exe;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="USBunkownSM" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\USBunkownSM.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="USBTrayNotifyClear" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icons\form\USBTrayNotifyClear.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="USBTrayNotifyAboutHov" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\form\USBTrayNotifyAboutHov.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="USBTrayNotifyCloseFormBgHov" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\form\USBTrayNotifyCloseFormBgHov.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="USBTrayNotifyMinFormHov" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\form\USBTrayNotifyMinFormHov.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

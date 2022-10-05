@@ -32,9 +32,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.notifyIconDisconnected = new System.Windows.Forms.NotifyIcon(this.components);
-            this.notifyIconConnected = new System.Windows.Forms.NotifyIcon(this.components);
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.notifyIconConnected = new System.Windows.Forms.NotifyIcon(this.components);
             this.notifyIconUnknown = new System.Windows.Forms.NotifyIcon(this.components);
             this.labelDeviceSelected = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
@@ -56,6 +56,7 @@
             this.toTrayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.label5 = new System.Windows.Forms.Label();
+            this.fileSystemWatcherAlreadyRunning = new System.IO.FileSystemWatcher();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCloseFormBg)).BeginInit();
@@ -63,6 +64,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxStatus)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAbout)).BeginInit();
             this.contextMenuStripForm.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcherAlreadyRunning)).BeginInit();
             this.SuspendLayout();
             // 
             // fileSystemWatcher1
@@ -76,15 +78,10 @@
             // 
             // notifyIconDisconnected
             // 
+            this.notifyIconDisconnected.ContextMenuStrip = this.contextMenuStrip1;
             this.notifyIconDisconnected.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIconDisconnected.Icon")));
             this.notifyIconDisconnected.Text = "USB Tray Notify";
             this.notifyIconDisconnected.MouseUp += new System.Windows.Forms.MouseEventHandler(this.notifyIconConnected_MouseUp);
-            // 
-            // notifyIconConnected
-            // 
-            this.notifyIconConnected.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIconConnected.Icon")));
-            this.notifyIconConnected.Text = "USB Tray Notify";
-            this.notifyIconConnected.MouseUp += new System.Windows.Forms.MouseEventHandler(this.notifyIconConnected_MouseUp);
             // 
             // contextMenuStrip1
             // 
@@ -107,8 +104,16 @@
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.MenuExit_Click);
             // 
+            // notifyIconConnected
+            // 
+            this.notifyIconConnected.ContextMenuStrip = this.contextMenuStrip1;
+            this.notifyIconConnected.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIconConnected.Icon")));
+            this.notifyIconConnected.Text = "USB Tray Notify";
+            this.notifyIconConnected.MouseUp += new System.Windows.Forms.MouseEventHandler(this.notifyIconConnected_MouseUp);
+            // 
             // notifyIconUnknown
             // 
+            this.notifyIconUnknown.ContextMenuStrip = this.contextMenuStrip1;
             this.notifyIconUnknown.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIconUnknown.Icon")));
             this.notifyIconUnknown.Text = "USB Tray Notify";
             this.notifyIconUnknown.Visible = true;
@@ -140,8 +145,8 @@
             this.buttonClearList.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.buttonClearList.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonClearList.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(21)))), ((int)(((byte)(80)))));
-            this.buttonClearList.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(183)))), ((int)(((byte)(50)))));
-            this.buttonClearList.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(207)))), ((int)(((byte)(154)))));
+            this.buttonClearList.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(240)))), ((int)(((byte)(145)))));
+            this.buttonClearList.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(197)))), ((int)(((byte)(117)))));
             this.buttonClearList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonClearList.Font = new System.Drawing.Font("Segoe UI", 9.857143F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonClearList.ForeColor = System.Drawing.Color.DimGray;
@@ -224,6 +229,8 @@
             this.pictureBoxCloseFormBg.TabStop = false;
             this.toolTip1.SetToolTip(this.pictureBoxCloseFormBg, "Exit App");
             this.pictureBoxCloseFormBg.Click += new System.EventHandler(this.MenuExit_Click);
+            this.pictureBoxCloseFormBg.MouseEnter += new System.EventHandler(this.pictureBoxCloseFormBg_MouseEnter);
+            this.pictureBoxCloseFormBg.MouseLeave += new System.EventHandler(this.pictureBoxCloseFormBg_MouseLeave);
             // 
             // pictureBoxMin
             // 
@@ -237,6 +244,8 @@
             this.pictureBoxMin.TabStop = false;
             this.toolTip1.SetToolTip(this.pictureBoxMin, "Minimize To Tray");
             this.pictureBoxMin.Click += new System.EventHandler(this.pictureBoxMin_Click);
+            this.pictureBoxMin.MouseEnter += new System.EventHandler(this.pictureBoxMin_MouseEnter);
+            this.pictureBoxMin.MouseLeave += new System.EventHandler(this.pictureBoxMin_MouseLeave);
             // 
             // pictureBoxStatus
             // 
@@ -283,6 +292,8 @@
             this.pictureBoxAbout.TabStop = false;
             this.toolTip1.SetToolTip(this.pictureBoxAbout, "Help and About");
             this.pictureBoxAbout.Click += new System.EventHandler(this.pictureBoxAbout_Click);
+            this.pictureBoxAbout.MouseEnter += new System.EventHandler(this.pictureBoxAbout_MouseEnter);
+            this.pictureBoxAbout.MouseLeave += new System.EventHandler(this.pictureBoxAbout_MouseLeave);
             // 
             // checkBoxStartMenuShorts
             // 
@@ -329,7 +340,7 @@
             this.toTrayToolStripMenuItem,
             this.exitToolStripMenuItem1});
             this.contextMenuStripForm.Name = "contextMenuStripForm";
-            this.contextMenuStripForm.Size = new System.Drawing.Size(156, 116);
+            this.contextMenuStripForm.Size = new System.Drawing.Size(303, 154);
             // 
             // toTrayToolStripMenuItem
             // 
@@ -337,18 +348,22 @@
             this.toTrayToolStripMenuItem.Image = global::USBTrayNotify.Properties.Resources.USBTrayNotifyMinForm;
             this.toTrayToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toTrayToolStripMenuItem.Name = "toTrayToolStripMenuItem";
-            this.toTrayToolStripMenuItem.Size = new System.Drawing.Size(155, 56);
+            this.toTrayToolStripMenuItem.Size = new System.Drawing.Size(302, 56);
             this.toTrayToolStripMenuItem.Text = "Tray";
             this.toTrayToolStripMenuItem.Click += new System.EventHandler(this.pictureBoxMin_Click);
+            this.toTrayToolStripMenuItem.MouseEnter += new System.EventHandler(this.pictureBoxMin_MouseEnter);
+            this.toTrayToolStripMenuItem.MouseLeave += new System.EventHandler(this.pictureBoxMin_MouseLeave);
             // 
             // exitToolStripMenuItem1
             // 
             this.exitToolStripMenuItem1.Image = global::USBTrayNotify.Properties.Resources.USBTrayNotifyCloseFormBg;
             this.exitToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.exitToolStripMenuItem1.Name = "exitToolStripMenuItem1";
-            this.exitToolStripMenuItem1.Size = new System.Drawing.Size(155, 56);
+            this.exitToolStripMenuItem1.Size = new System.Drawing.Size(302, 56);
             this.exitToolStripMenuItem1.Text = "Exit";
             this.exitToolStripMenuItem1.Click += new System.EventHandler(this.MenuExit_Click);
+            this.exitToolStripMenuItem1.MouseEnter += new System.EventHandler(this.pictureBoxCloseFormBg_MouseEnter);
+            this.exitToolStripMenuItem1.MouseLeave += new System.EventHandler(this.pictureBoxCloseFormBg_MouseLeave);
             // 
             // label5
             // 
@@ -358,12 +373,22 @@
             this.label5.Size = new System.Drawing.Size(633, 2);
             this.label5.TabIndex = 12;
             // 
+            // fileSystemWatcherAlreadyRunning
+            // 
+            this.fileSystemWatcherAlreadyRunning.EnableRaisingEvents = true;
+            this.fileSystemWatcherAlreadyRunning.Filter = "AlreadyRunning.log";
+            this.fileSystemWatcherAlreadyRunning.NotifyFilter = System.IO.NotifyFilters.FileName;
+            this.fileSystemWatcherAlreadyRunning.Path = "C:";
+            this.fileSystemWatcherAlreadyRunning.SynchronizingObject = this;
+            this.fileSystemWatcherAlreadyRunning.Created += new System.IO.FileSystemEventHandler(this.fileSystemWatcherAlreadyRunning_Created);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.ClientSize = new System.Drawing.Size(845, 454);
+            this.ContextMenuStrip = this.contextMenuStripForm;
             this.Controls.Add(this.pictureBoxStatus);
             this.Controls.Add(this.checkBoxStartMenuShorts);
             this.Controls.Add(this.label3);
@@ -400,6 +425,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxStatus)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAbout)).EndInit();
             this.contextMenuStripForm.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcherAlreadyRunning)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -432,6 +458,7 @@
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.CheckBox checkBoxStartMenuShorts;
+        private System.IO.FileSystemWatcher fileSystemWatcherAlreadyRunning;
     }
 }
 

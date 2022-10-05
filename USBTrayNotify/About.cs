@@ -64,5 +64,18 @@ namespace USBTrayNotify
         {
             Hide();
         }
+
+        //Mouse hover
+        private void pictureBoxCloseAbout_MouseEnter(object sender, EventArgs e)
+        {
+            pictureBoxCloseAbout.Image = global::USBTrayNotify.Properties.Resources.USBTrayNotifyCloseFormBgHov;
+            exitToolStripMenuItem.Image = global::USBTrayNotify.Properties.Resources.USBTrayNotifyCloseFormBgHov;
+        }
+
+        private void pictureBoxCloseAbout_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBoxCloseAbout.Image = global::USBTrayNotify.Properties.Resources.USBTrayNotifyCloseFormBg;
+            exitToolStripMenuItem.Image = global::USBTrayNotify.Properties.Resources.USBTrayNotifyCloseFormBg;
+        }
     }
 }

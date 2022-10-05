@@ -199,6 +199,16 @@ namespace USBTrayNotify.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap USBTrayNotifyAboutHov {
+            get {
+                object obj = ResourceManager.GetObject("USBTrayNotifyAboutHov", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap USBTrayNotifyClear {
             get {
                 object obj = ResourceManager.GetObject("USBTrayNotifyClear", resourceCulture);
@@ -219,9 +229,29 @@ namespace USBTrayNotify.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap USBTrayNotifyCloseFormBgHov {
+            get {
+                object obj = ResourceManager.GetObject("USBTrayNotifyCloseFormBgHov", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap USBTrayNotifyMinForm {
             get {
                 object obj = ResourceManager.GetObject("USBTrayNotifyMinForm", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap USBTrayNotifyMinFormHov {
+            get {
+                object obj = ResourceManager.GetObject("USBTrayNotifyMinFormHov", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

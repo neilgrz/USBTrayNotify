@@ -49,7 +49,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>USBconnected.ico</ApplicationIcon>
+    <ApplicationIcon>USBconnectedNC.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <NoWin32Manifest>true</NoWin32Manifest>
@@ -125,6 +125,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Icons\form\USBTrayNotifyMinFormHov.png" />
+    <None Include="Icons\form\USBTrayNotifyCloseFormBgHov.png" />
+    <None Include="Icons\form\USBTrayNotifyAboutHov.png" />
+    <Content Include="USBconnectedNC.ico" />
     <None Include="USBLogView\USBLogView.cfg" />
     <None Include="USBLogView\USBLogView.exe" />
     <None Include="USBLogView\readme.txt" />

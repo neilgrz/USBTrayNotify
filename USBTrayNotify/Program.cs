@@ -15,7 +15,10 @@ namespace USBTrayNotify
 
         {
             if (Process.GetProcessesByName(Process.GetCurrentProcess().ProcessName).Length > 1)
+            {
+                File.Create("AlreadyRunning.log").Dispose();
                 return;
+            }
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
@@ -24,6 +27,8 @@ namespace USBTrayNotify
             Application.Run(new Form1());
         }
 
+
+        //Extract USBLogView
         private static void USBLogViewExtract()
         {
             if (!Directory.Exists(Application.StartupPath + "\\USBLogView"))
