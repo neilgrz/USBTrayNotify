@@ -33,14 +33,14 @@
             this.contextMenuStripOptions = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTipOptions = new System.Windows.Forms.ToolTip(this.components);
+            this.checkBoxStartWithWin = new System.Windows.Forms.CheckBox();
+            this.checkBoxStartMenuShorts = new System.Windows.Forms.CheckBox();
+            this.checkBoxShowOnNew = new System.Windows.Forms.CheckBox();
             this.labelTitleOptions = new System.Windows.Forms.Label();
             this.pictureBoxCloseOptions = new System.Windows.Forms.PictureBox();
             this.pictureBoxOptionsMain = new System.Windows.Forms.PictureBox();
             this.labelOptionsBarTop = new System.Windows.Forms.Label();
             this.labelOptionsBarLeft = new System.Windows.Forms.Label();
-            this.checkBoxStartWithWin = new System.Windows.Forms.CheckBox();
-            this.checkBoxStartMenuShorts = new System.Windows.Forms.CheckBox();
-            this.checkBoxShowOnNew = new System.Windows.Forms.CheckBox();
             this.labelOptionsBarRight = new System.Windows.Forms.Label();
             this.labelAboutBarBottom = new System.Windows.Forms.Label();
             this.contextMenuStripOptions.SuspendLayout();
@@ -54,14 +54,14 @@
             this.contextMenuStripOptions.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.exitToolStripMenuItem});
             this.contextMenuStripOptions.Name = "contextMenuStrip1";
-            this.contextMenuStripOptions.Size = new System.Drawing.Size(136, 58);
+            this.contextMenuStripOptions.Size = new System.Drawing.Size(169, 60);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Image = global::USBTrayNotify.Properties.Resources.USBTrayNotifyCloseFormBg;
             this.exitToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(135, 54);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(168, 56);
             this.exitToolStripMenuItem.Text = "Close";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             this.exitToolStripMenuItem.MouseEnter += new System.EventHandler(this.pictureBoxCloseOptions_MouseEnter);
@@ -74,15 +74,59 @@
             this.toolTipOptions.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.toolTipOptions.IsBalloon = true;
             // 
+            // checkBoxStartWithWin
+            // 
+            this.checkBoxStartWithWin.AutoSize = true;
+            this.checkBoxStartWithWin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.checkBoxStartWithWin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.857143F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxStartWithWin.Location = new System.Drawing.Point(140, 67);
+            this.checkBoxStartWithWin.Name = "checkBoxStartWithWin";
+            this.checkBoxStartWithWin.Size = new System.Drawing.Size(242, 33);
+            this.checkBoxStartWithWin.TabIndex = 0;
+            this.checkBoxStartWithWin.Text = "Start with Windows";
+            this.toolTipOptions.SetToolTip(this.checkBoxStartWithWin, "Start USBTrayNotify when logging into Windows");
+            this.checkBoxStartWithWin.UseVisualStyleBackColor = true;
+            this.checkBoxStartWithWin.CheckedChanged += new System.EventHandler(this.checkBoxStartWithWin_CheckedChanged);
+            // 
+            // checkBoxStartMenuShorts
+            // 
+            this.checkBoxStartMenuShorts.AutoSize = true;
+            this.checkBoxStartMenuShorts.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.checkBoxStartMenuShorts.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.857143F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxStartMenuShorts.Location = new System.Drawing.Point(140, 94);
+            this.checkBoxStartMenuShorts.Name = "checkBoxStartMenuShorts";
+            this.checkBoxStartMenuShorts.Size = new System.Drawing.Size(244, 33);
+            this.checkBoxStartMenuShorts.TabIndex = 1;
+            this.checkBoxStartMenuShorts.Text = "Start Menu shortcut";
+            this.toolTipOptions.SetToolTip(this.checkBoxStartMenuShorts, "Add or remove Start Menu shortcut for USBTrayNotify");
+            this.checkBoxStartMenuShorts.UseVisualStyleBackColor = true;
+            this.checkBoxStartMenuShorts.CheckedChanged += new System.EventHandler(this.checkBoxStartMenuShorts_CheckedChanged);
+            // 
+            // checkBoxShowOnNew
+            // 
+            this.checkBoxShowOnNew.AutoSize = true;
+            this.checkBoxShowOnNew.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.checkBoxShowOnNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.857143F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxShowOnNew.Location = new System.Drawing.Point(140, 120);
+            this.checkBoxShowOnNew.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.checkBoxShowOnNew.Name = "checkBoxShowOnNew";
+            this.checkBoxShowOnNew.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.checkBoxShowOnNew.Size = new System.Drawing.Size(273, 33);
+            this.checkBoxShowOnNew.TabIndex = 2;
+            this.checkBoxShowOnNew.Text = "Show on new devices";
+            this.toolTipOptions.SetToolTip(this.checkBoxShowOnNew, "Show USB Tray Notify window when new unknown devices are connected");
+            this.checkBoxShowOnNew.UseVisualStyleBackColor = true;
+            this.checkBoxShowOnNew.CheckedChanged += new System.EventHandler(this.checkBoxShowOnNew_CheckedChanged);
+            // 
             // labelTitleOptions
             // 
             this.labelTitleOptions.AutoSize = true;
             this.labelTitleOptions.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitleOptions.Location = new System.Drawing.Point(189, 4);
+            this.labelTitleOptions.Location = new System.Drawing.Point(140, 4);
             this.labelTitleOptions.Name = "labelTitleOptions";
-            this.labelTitleOptions.Size = new System.Drawing.Size(50, 15);
+            this.labelTitleOptions.Size = new System.Drawing.Size(252, 30);
             this.labelTitleOptions.TabIndex = 1;
-            this.labelTitleOptions.Text = "Options";
+            this.labelTitleOptions.Text = "USB Tray Notify Options";
             this.labelTitleOptions.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MouseDownDrag);
             // 
             // pictureBoxCloseOptions
@@ -101,7 +145,7 @@
             // 
             // pictureBoxOptionsMain
             // 
-            this.pictureBoxOptionsMain.Image = global::USBTrayNotify.Properties.Resources.USBconnected;
+            this.pictureBoxOptionsMain.Image = global::USBTrayNotify.Properties.Resources.USBTrayNotifyOptionsHov;
             this.pictureBoxOptionsMain.Location = new System.Drawing.Point(7, 8);
             this.pictureBoxOptionsMain.Name = "pictureBoxOptionsMain";
             this.pictureBoxOptionsMain.Size = new System.Drawing.Size(50, 50);
@@ -128,50 +172,6 @@
             this.labelOptionsBarLeft.TabIndex = 12;
             this.labelOptionsBarLeft.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MouseDownDrag);
             // 
-            // checkBoxStartWithWin
-            // 
-            this.checkBoxStartWithWin.AutoSize = true;
-            this.checkBoxStartWithWin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.checkBoxStartWithWin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.857143F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxStartWithWin.Location = new System.Drawing.Point(140, 67);
-            this.checkBoxStartWithWin.Name = "checkBoxStartWithWin";
-            this.checkBoxStartWithWin.Size = new System.Drawing.Size(145, 21);
-            this.checkBoxStartWithWin.TabIndex = 0;
-            this.checkBoxStartWithWin.Text = "Start with Windows";
-            this.toolTipOptions.SetToolTip(this.checkBoxStartWithWin, "Start USBTrayNotify when logging into Windows");
-            this.checkBoxStartWithWin.UseVisualStyleBackColor = true;
-            this.checkBoxStartWithWin.CheckedChanged += new System.EventHandler(this.checkBoxStartWithWin_CheckedChanged);
-            // 
-            // checkBoxStartMenuShorts
-            // 
-            this.checkBoxStartMenuShorts.AutoSize = true;
-            this.checkBoxStartMenuShorts.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.checkBoxStartMenuShorts.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.857143F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxStartMenuShorts.Location = new System.Drawing.Point(140, 94);
-            this.checkBoxStartMenuShorts.Name = "checkBoxStartMenuShorts";
-            this.checkBoxStartMenuShorts.Size = new System.Drawing.Size(151, 21);
-            this.checkBoxStartMenuShorts.TabIndex = 1;
-            this.checkBoxStartMenuShorts.Text = "Start Menu shortcut";
-            this.toolTipOptions.SetToolTip(this.checkBoxStartMenuShorts, "Add or remove Start Menu shortcut for USBTrayNotify");
-            this.checkBoxStartMenuShorts.UseVisualStyleBackColor = true;
-            this.checkBoxStartMenuShorts.CheckedChanged += new System.EventHandler(this.checkBoxStartMenuShorts_CheckedChanged);
-            // 
-            // checkBoxShowOnNew
-            // 
-            this.checkBoxShowOnNew.AutoSize = true;
-            this.checkBoxShowOnNew.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.checkBoxShowOnNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.857143F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxShowOnNew.Location = new System.Drawing.Point(140, 120);
-            this.checkBoxShowOnNew.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.checkBoxShowOnNew.Name = "checkBoxShowOnNew";
-            this.checkBoxShowOnNew.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.checkBoxShowOnNew.Size = new System.Drawing.Size(162, 21);
-            this.checkBoxShowOnNew.TabIndex = 2;
-            this.checkBoxShowOnNew.Text = "Show on new devices";
-            this.toolTipOptions.SetToolTip(this.checkBoxShowOnNew, "Show USB Tray Notify window when new unknown devices are connected");
-            this.checkBoxShowOnNew.UseVisualStyleBackColor = true;
-            this.checkBoxShowOnNew.CheckedChanged += new System.EventHandler(this.checkBoxShowOnNew_CheckedChanged);
-            // 
             // labelOptionsBarRight
             // 
             this.labelOptionsBarRight.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -191,7 +191,7 @@
             // 
             // Options
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.ClientSize = new System.Drawing.Size(429, 211);
@@ -214,7 +214,7 @@
             this.MaximizeBox = false;
             this.Name = "Options";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Options";
+            this.Text = " Options - USB Tray Notify";
             this.Load += new System.EventHandler(this.Options_Load);
             this.contextMenuStripOptions.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCloseOptions)).EndInit();

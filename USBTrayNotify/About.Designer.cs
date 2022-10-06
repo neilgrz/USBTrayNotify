@@ -62,7 +62,7 @@
             this.labelTitleAbout.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTitleAbout.Location = new System.Drawing.Point(189, 4);
             this.labelTitleAbout.Name = "labelTitleAbout";
-            this.labelTitleAbout.Size = new System.Drawing.Size(41, 15);
+            this.labelTitleAbout.Size = new System.Drawing.Size(75, 30);
             this.labelTitleAbout.TabIndex = 0;
             this.labelTitleAbout.Text = "About";
             this.labelTitleAbout.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MouseDownDrag);
@@ -90,7 +90,7 @@
             this.labelAboutInfo.Location = new System.Drawing.Point(134, 49);
             this.labelAboutInfo.Name = "labelAboutInfo";
             this.labelAboutInfo.Padding = new System.Windows.Forms.Padding(30, 25, 30, 25);
-            this.labelAboutInfo.Size = new System.Drawing.Size(160, 86);
+            this.labelAboutInfo.Size = new System.Drawing.Size(232, 114);
             this.labelAboutInfo.TabIndex = 2;
             this.labelAboutInfo.Text = "USB Tray Notify\r\n Version: 1.0.0";
             this.labelAboutInfo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MouseDownDrag);
@@ -101,7 +101,7 @@
             this.linkLabelAbout.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabelAbout.Location = new System.Drawing.Point(92, 262);
             this.linkLabelAbout.Name = "linkLabelAbout";
-            this.linkLabelAbout.Size = new System.Drawing.Size(245, 17);
+            this.linkLabelAbout.Size = new System.Drawing.Size(437, 31);
             this.linkLabelAbout.TabIndex = 0;
             this.linkLabelAbout.TabStop = true;
             this.linkLabelAbout.Text = "https://github.com/neilgrz/USBTrayNotify";
@@ -121,14 +121,14 @@
             this.contextMenuStripAbout.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.exitToolStripMenuItem});
             this.contextMenuStripAbout.Name = "contextMenuStrip1";
-            this.contextMenuStripAbout.Size = new System.Drawing.Size(136, 58);
+            this.contextMenuStripAbout.Size = new System.Drawing.Size(169, 60);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Image = global::USBTrayNotify.Properties.Resources.USBTrayNotifyCloseFormBg;
             this.exitToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(135, 54);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(168, 56);
             this.exitToolStripMenuItem.Text = "Close";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             this.exitToolStripMenuItem.MouseEnter += new System.EventHandler(this.pictureBoxCloseAbout_MouseEnter);
@@ -136,7 +136,7 @@
             // 
             // pictureBoxAboutMain
             // 
-            this.pictureBoxAboutMain.Image = global::USBTrayNotify.Properties.Resources.USBconnected;
+            this.pictureBoxAboutMain.Image = global::USBTrayNotify.Properties.Resources.USBdisconnected;
             this.pictureBoxAboutMain.Location = new System.Drawing.Point(7, 8);
             this.pictureBoxAboutMain.Name = "pictureBoxAboutMain";
             this.pictureBoxAboutMain.Size = new System.Drawing.Size(50, 50);
@@ -193,7 +193,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(83, 221);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 16);
+            this.label2.Size = new System.Drawing.Size(130, 29);
             this.label2.TabIndex = 8;
             this.label2.Text = "Connected";
             this.label2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MouseDownDrag);
@@ -204,7 +204,7 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(170, 221);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(90, 16);
+            this.label3.Size = new System.Drawing.Size(160, 29);
             this.label3.TabIndex = 9;
             this.label3.Text = "Disconnected";
             this.label3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MouseDownDrag);
@@ -215,7 +215,7 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(277, 221);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(62, 16);
+            this.label4.Size = new System.Drawing.Size(113, 29);
             this.label4.TabIndex = 10;
             this.label4.Text = "Unknown";
             this.label4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MouseDownDrag);
@@ -250,7 +250,7 @@
             // 
             // About
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.ClientSize = new System.Drawing.Size(429, 310);
@@ -278,7 +278,7 @@
             this.MaximizeBox = false;
             this.Name = "About";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "About";
+            this.Text = "About - USB Tray Notify";
             this.Load += new System.EventHandler(this.About_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCloseAbout)).EndInit();
             this.contextMenuStripAbout.ResumeLayout(false);
