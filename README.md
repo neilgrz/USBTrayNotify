@@ -1,5 +1,5 @@
 ﻿# <img src="https://github.com/neilgrz/USBTrayNotify/blob/main/USBTrayNotify/Icons/USBconnectedNC.ico" width=4% height=4%> &nbsp;USB Tray Notify
-* Shows and alternates icon in system tray when a specific USB device is connected and disconnected.
+* Shows and alternates icon in system tray when selected USB device is connected and disconnected.
 
 
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://github.com/neilgrz/USBTrayNotify/blob/main/USBTrayNotify/Icons/USBconnected.ico" width=3% height=3%> &nbsp;**Connected**
