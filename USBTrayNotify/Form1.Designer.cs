@@ -425,6 +425,8 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.ClientSize = new System.Drawing.Size(845, 454);
             this.ContextMenuStrip = this.contextMenuStripForm;
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.pictureBoxMin);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.pictureBoxOptions);
             this.Controls.Add(this.label1);
@@ -432,9 +434,7 @@
             this.Controls.Add(this.pictureBoxStatus);
             this.Controls.Add(this.pictureBoxAbout);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBoxCloseFormBg);
-            this.Controls.Add(this.pictureBoxMin);
             this.Controls.Add(this.labelBarTop);
             this.Controls.Add(this.labelBarBottom);
             this.Controls.Add(this.labelBarLeft);
