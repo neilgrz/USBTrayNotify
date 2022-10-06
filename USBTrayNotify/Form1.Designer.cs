@@ -42,22 +42,25 @@
             this.exitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.labelDeviceSelected = new System.Windows.Forms.Label();
             this.backgroundWorkerUSBLog = new System.ComponentModel.BackgroundWorker();
-            this.buttonClearList = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
-            this.checkBoxShowOnNew = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBoxCloseFormBg = new System.Windows.Forms.PictureBox();
             this.pictureBoxMin = new System.Windows.Forms.PictureBox();
             this.pictureBoxStatus = new System.Windows.Forms.PictureBox();
             this.toolTipForm1 = new System.Windows.Forms.ToolTip(this.components);
-            this.checkBoxStartWithWin = new System.Windows.Forms.CheckBox();
             this.pictureBoxAbout = new System.Windows.Forms.PictureBox();
-            this.checkBoxStartMenuShorts = new System.Windows.Forms.CheckBox();
+            this.pictureBoxClear = new System.Windows.Forms.PictureBox();
+            this.pictureBoxOptions = new System.Windows.Forms.PictureBox();
             this.labelTitle = new System.Windows.Forms.Label();
             this.labelSelectedPrefix = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.fileSystemWatcherAlreadyRunning = new System.IO.FileSystemWatcher();
+            this.labelBarRight = new System.Windows.Forms.Label();
+            this.labelBarBottom = new System.Windows.Forms.Label();
+            this.labelBarLeft = new System.Windows.Forms.Label();
+            this.labelBarTop = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcherUSBLog)).BeginInit();
             this.contextMenuStripTray.SuspendLayout();
             this.contextMenuStripForm.SuspendLayout();
@@ -65,6 +68,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxStatus)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAbout)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClear)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOptions)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcherAlreadyRunning)).BeginInit();
             this.SuspendLayout();
             // 
@@ -92,15 +97,14 @@
             this.showHideToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.contextMenuStripTray.Name = "contextMenuStrip1";
-            this.contextMenuStripTray.Size = new System.Drawing.Size(204, 84);
+            this.contextMenuStripTray.Size = new System.Drawing.Size(188, 76);
             this.contextMenuStripTray.Text = "USBTrayNotify";
             // 
             // showHideToolStripMenuItem
             // 
             this.showHideToolStripMenuItem.BackColor = System.Drawing.SystemColors.Control;
-            this.showHideToolStripMenuItem.Image = global::USBTrayNotify.Properties.Resources.ShowHide;
             this.showHideToolStripMenuItem.Name = "showHideToolStripMenuItem";
-            this.showHideToolStripMenuItem.Size = new System.Drawing.Size(203, 40);
+            this.showHideToolStripMenuItem.Size = new System.Drawing.Size(187, 36);
             this.showHideToolStripMenuItem.Text = "Show/Hide";
             this.showHideToolStripMenuItem.Click += new System.EventHandler(this.showHideToolStripMenuItem_Click);
             this.showHideToolStripMenuItem.MouseEnter += new System.EventHandler(this.showHideToolStripMenuItem_MouseEnter);
@@ -111,9 +115,8 @@
             this.exitToolStripMenuItem.BackColor = System.Drawing.SystemColors.Control;
             this.exitToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exitToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.exitToolStripMenuItem.Image = global::USBTrayNotify.Properties.Resources.USBTrayNotifyCloseFormBg;
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(203, 40);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(187, 36);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.MenuExit_Click);
             this.exitToolStripMenuItem.MouseEnter += new System.EventHandler(this.pictureBoxCloseFormBg_MouseEnter);
@@ -142,15 +145,14 @@
             this.toTrayToolStripMenuItem,
             this.exitToolStripMenuItem1});
             this.contextMenuStripForm.Name = "contextMenuStripForm";
-            this.contextMenuStripForm.Size = new System.Drawing.Size(156, 116);
+            this.contextMenuStripForm.Size = new System.Drawing.Size(124, 76);
             // 
             // toTrayToolStripMenuItem
             // 
             this.toTrayToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toTrayToolStripMenuItem.Image = global::USBTrayNotify.Properties.Resources.USBTrayNotifyMinForm;
             this.toTrayToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toTrayToolStripMenuItem.Name = "toTrayToolStripMenuItem";
-            this.toTrayToolStripMenuItem.Size = new System.Drawing.Size(155, 56);
+            this.toTrayToolStripMenuItem.Size = new System.Drawing.Size(123, 36);
             this.toTrayToolStripMenuItem.Text = "Tray";
             this.toTrayToolStripMenuItem.Click += new System.EventHandler(this.pictureBoxMin_Click);
             this.toTrayToolStripMenuItem.MouseEnter += new System.EventHandler(this.pictureBoxMin_MouseEnter);
@@ -158,10 +160,9 @@
             // 
             // exitToolStripMenuItem1
             // 
-            this.exitToolStripMenuItem1.Image = global::USBTrayNotify.Properties.Resources.USBTrayNotifyCloseFormBg;
             this.exitToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.exitToolStripMenuItem1.Name = "exitToolStripMenuItem1";
-            this.exitToolStripMenuItem1.Size = new System.Drawing.Size(155, 56);
+            this.exitToolStripMenuItem1.Size = new System.Drawing.Size(123, 36);
             this.exitToolStripMenuItem1.Text = "Exit";
             this.exitToolStripMenuItem1.Click += new System.EventHandler(this.MenuExit_Click);
             this.exitToolStripMenuItem1.MouseEnter += new System.EventHandler(this.pictureBoxCloseFormBg_MouseEnter);
@@ -188,29 +189,6 @@
             this.backgroundWorkerUSBLog.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
             this.backgroundWorkerUSBLog.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
             // 
-            // buttonClearList
-            // 
-            this.buttonClearList.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.buttonClearList.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonClearList.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(21)))), ((int)(((byte)(80)))));
-            this.buttonClearList.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(240)))), ((int)(((byte)(145)))));
-            this.buttonClearList.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(197)))), ((int)(((byte)(117)))));
-            this.buttonClearList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonClearList.Font = new System.Drawing.Font("Segoe UI", 9.857143F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonClearList.ForeColor = System.Drawing.Color.DimGray;
-            this.buttonClearList.Image = global::USBTrayNotify.Properties.Resources.USBTrayNotifyClear;
-            this.buttonClearList.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.buttonClearList.Location = new System.Drawing.Point(181, 356);
-            this.buttonClearList.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.buttonClearList.Name = "buttonClearList";
-            this.buttonClearList.Size = new System.Drawing.Size(98, 54);
-            this.buttonClearList.TabIndex = 1;
-            this.buttonClearList.Text = "Clear";
-            this.buttonClearList.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.toolTipForm1.SetToolTip(this.buttonClearList, "Clear known list and set device to none");
-            this.buttonClearList.UseVisualStyleBackColor = true;
-            this.buttonClearList.Click += new System.EventHandler(this.buttonClearList_Click);
-            // 
             // listBox1
             // 
             this.listBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
@@ -229,27 +207,11 @@
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.buttonSaveDevice_Click);
             this.listBox1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listBox1_MouseDoubleClick);
             // 
-            // checkBoxShowOnNew
-            // 
-            this.checkBoxShowOnNew.AutoSize = true;
-            this.checkBoxShowOnNew.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.checkBoxShowOnNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.857143F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxShowOnNew.Location = new System.Drawing.Point(526, 373);
-            this.checkBoxShowOnNew.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.checkBoxShowOnNew.Name = "checkBoxShowOnNew";
-            this.checkBoxShowOnNew.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.checkBoxShowOnNew.Size = new System.Drawing.Size(273, 33);
-            this.checkBoxShowOnNew.TabIndex = 3;
-            this.checkBoxShowOnNew.Text = "Show on new devices";
-            this.toolTipForm1.SetToolTip(this.checkBoxShowOnNew, "Show this window when new unknown devices are connected");
-            this.checkBoxShowOnNew.UseVisualStyleBackColor = true;
-            this.checkBoxShowOnNew.CheckedChanged += new System.EventHandler(this.checkBoxShowOnNew_CheckedChanged);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 8.142858F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(742, 3);
+            this.label2.Location = new System.Drawing.Point(732, 3);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 28);
             this.label2.TabIndex = 4;
@@ -259,7 +221,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 8.142858F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(800, 3);
+            this.label3.Location = new System.Drawing.Point(790, 3);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(43, 28);
             this.label3.TabIndex = 5;
@@ -269,7 +231,7 @@
             // 
             this.pictureBoxCloseFormBg.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxCloseFormBg.Image = global::USBTrayNotify.Properties.Resources.USBTrayNotifyCloseFormBg;
-            this.pictureBoxCloseFormBg.Location = new System.Drawing.Point(787, 8);
+            this.pictureBoxCloseFormBg.Location = new System.Drawing.Point(777, 8);
             this.pictureBoxCloseFormBg.Name = "pictureBoxCloseFormBg";
             this.pictureBoxCloseFormBg.Size = new System.Drawing.Size(50, 50);
             this.pictureBoxCloseFormBg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -284,7 +246,7 @@
             // 
             this.pictureBoxMin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxMin.Image = global::USBTrayNotify.Properties.Resources.USBTrayNotifyMinForm;
-            this.pictureBoxMin.Location = new System.Drawing.Point(731, 8);
+            this.pictureBoxMin.Location = new System.Drawing.Point(721, 8);
             this.pictureBoxMin.Name = "pictureBoxMin";
             this.pictureBoxMin.Size = new System.Drawing.Size(50, 50);
             this.pictureBoxMin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -298,10 +260,10 @@
             // pictureBoxStatus
             // 
             this.pictureBoxStatus.Image = global::USBTrayNotify.Properties.Resources.USBunknown;
-            this.pictureBoxStatus.Location = new System.Drawing.Point(2, 4);
+            this.pictureBoxStatus.Location = new System.Drawing.Point(5, 5);
             this.pictureBoxStatus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBoxStatus.Name = "pictureBoxStatus";
-            this.pictureBoxStatus.Size = new System.Drawing.Size(72, 72);
+            this.pictureBoxStatus.Size = new System.Drawing.Size(50, 50);
             this.pictureBoxStatus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBoxStatus.TabIndex = 5;
             this.pictureBoxStatus.TabStop = false;
@@ -309,32 +271,20 @@
             // 
             // toolTipForm1
             // 
-            this.toolTipForm1.AutomaticDelay = 350;
+            this.toolTipForm1.AutomaticDelay = 600;
             this.toolTipForm1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.toolTipForm1.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.toolTipForm1.IsBalloon = true;
             // 
-            // checkBoxStartWithWin
-            // 
-            this.checkBoxStartWithWin.AutoSize = true;
-            this.checkBoxStartWithWin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.checkBoxStartWithWin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.857143F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxStartWithWin.Location = new System.Drawing.Point(526, 347);
-            this.checkBoxStartWithWin.Name = "checkBoxStartWithWin";
-            this.checkBoxStartWithWin.Size = new System.Drawing.Size(242, 33);
-            this.checkBoxStartWithWin.TabIndex = 2;
-            this.checkBoxStartWithWin.Text = "Start with Windows";
-            this.toolTipForm1.SetToolTip(this.checkBoxStartWithWin, "Start USB Tray Notify when Windows starts");
-            this.checkBoxStartWithWin.UseVisualStyleBackColor = true;
-            this.checkBoxStartWithWin.CheckedChanged += new System.EventHandler(this.checkBoxStartWithWin_CheckedChanged);
-            // 
             // pictureBoxAbout
             // 
+            this.pictureBoxAbout.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxAbout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBoxAbout.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBoxAbout.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxAbout.Image")));
-            this.pictureBoxAbout.Location = new System.Drawing.Point(808, 416);
+            this.pictureBoxAbout.Image = global::USBTrayNotify.Properties.Resources.USBTrayNotifyAbout;
+            this.pictureBoxAbout.Location = new System.Drawing.Point(799, 410);
             this.pictureBoxAbout.Name = "pictureBoxAbout";
-            this.pictureBoxAbout.Size = new System.Drawing.Size(34, 36);
+            this.pictureBoxAbout.Size = new System.Drawing.Size(26, 26);
             this.pictureBoxAbout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBoxAbout.TabIndex = 8;
             this.pictureBoxAbout.TabStop = false;
@@ -343,19 +293,35 @@
             this.pictureBoxAbout.MouseEnter += new System.EventHandler(this.pictureBoxAbout_MouseEnter);
             this.pictureBoxAbout.MouseLeave += new System.EventHandler(this.pictureBoxAbout_MouseLeave);
             // 
-            // checkBoxStartMenuShorts
+            // pictureBoxClear
             // 
-            this.checkBoxStartMenuShorts.AutoSize = true;
-            this.checkBoxStartMenuShorts.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.checkBoxStartMenuShorts.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.857143F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxStartMenuShorts.Location = new System.Drawing.Point(526, 399);
-            this.checkBoxStartMenuShorts.Name = "checkBoxStartMenuShorts";
-            this.checkBoxStartMenuShorts.Size = new System.Drawing.Size(256, 33);
-            this.checkBoxStartMenuShorts.TabIndex = 4;
-            this.checkBoxStartMenuShorts.Text = "Start Menu shortcuts";
-            this.toolTipForm1.SetToolTip(this.checkBoxStartMenuShorts, "Add or remove USBTrayNotify Start Menu shortcuts");
-            this.checkBoxStartMenuShorts.UseVisualStyleBackColor = true;
-            this.checkBoxStartMenuShorts.CheckedChanged += new System.EventHandler(this.checkBoxStartMenuShorts_CheckedChanged);
+            this.pictureBoxClear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBoxClear.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxClear.Image")));
+            this.pictureBoxClear.Location = new System.Drawing.Point(350, 344);
+            this.pictureBoxClear.Name = "pictureBoxClear";
+            this.pictureBoxClear.Size = new System.Drawing.Size(50, 50);
+            this.pictureBoxClear.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBoxClear.TabIndex = 17;
+            this.pictureBoxClear.TabStop = false;
+            this.toolTipForm1.SetToolTip(this.pictureBoxClear, "Clear known list and set device to none");
+            this.pictureBoxClear.Click += new System.EventHandler(this.buttonClearList_Click);
+            this.pictureBoxClear.MouseEnter += new System.EventHandler(this.pictureBoxClear_MouseEnter);
+            this.pictureBoxClear.MouseLeave += new System.EventHandler(this.pictureBoxClear_MouseLeave);
+            // 
+            // pictureBoxOptions
+            // 
+            this.pictureBoxOptions.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBoxOptions.Image = global::USBTrayNotify.Properties.Resources.USBTrayNotifyOptions;
+            this.pictureBoxOptions.Location = new System.Drawing.Point(437, 345);
+            this.pictureBoxOptions.Name = "pictureBoxOptions";
+            this.pictureBoxOptions.Size = new System.Drawing.Size(50, 50);
+            this.pictureBoxOptions.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBoxOptions.TabIndex = 19;
+            this.pictureBoxOptions.TabStop = false;
+            this.toolTipForm1.SetToolTip(this.pictureBoxOptions, "App Options");
+            this.pictureBoxOptions.Click += new System.EventHandler(this.pictureBoxOptions_Click);
+            this.pictureBoxOptions.MouseEnter += new System.EventHandler(this.pictureBoxOptions_MouseEnter);
+            this.pictureBoxOptions.MouseLeave += new System.EventHandler(this.pictureBoxOptions_MouseLeave);
             // 
             // labelTitle
             // 
@@ -380,14 +346,6 @@
             this.labelSelectedPrefix.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.labelSelectedPrefix.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MouseDownDrag);
             // 
-            // label5
-            // 
-            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label5.Location = new System.Drawing.Point(81, 24);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(633, 2);
-            this.label5.TabIndex = 12;
-            // 
             // fileSystemWatcherAlreadyRunning
             // 
             this.fileSystemWatcherAlreadyRunning.EnableRaisingEvents = true;
@@ -397,6 +355,69 @@
             this.fileSystemWatcherAlreadyRunning.SynchronizingObject = this;
             this.fileSystemWatcherAlreadyRunning.Created += new System.IO.FileSystemEventHandler(this.fileSystemWatcherAlreadyRunning_Created);
             // 
+            // labelBarRight
+            // 
+            this.labelBarRight.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelBarRight.Location = new System.Drawing.Point(831, 25);
+            this.labelBarRight.Name = "labelBarRight";
+            this.labelBarRight.Size = new System.Drawing.Size(2, 417);
+            this.labelBarRight.TabIndex = 13;
+            this.labelBarRight.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MouseDownDrag);
+            // 
+            // labelBarBottom
+            // 
+            this.labelBarBottom.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelBarBottom.Location = new System.Drawing.Point(14, 441);
+            this.labelBarBottom.Name = "labelBarBottom";
+            this.labelBarBottom.Size = new System.Drawing.Size(819, 2);
+            this.labelBarBottom.TabIndex = 14;
+            this.labelBarBottom.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MouseDownDrag);
+            // 
+            // labelBarLeft
+            // 
+            this.labelBarLeft.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelBarLeft.Location = new System.Drawing.Point(14, 25);
+            this.labelBarLeft.Name = "labelBarLeft";
+            this.labelBarLeft.Size = new System.Drawing.Size(2, 417);
+            this.labelBarLeft.TabIndex = 15;
+            this.labelBarLeft.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MouseDownDrag);
+            // 
+            // labelBarTop
+            // 
+            this.labelBarTop.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelBarTop.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.labelBarTop.Location = new System.Drawing.Point(14, 25);
+            this.labelBarTop.Name = "labelBarTop";
+            this.labelBarTop.Size = new System.Drawing.Size(818, 1);
+            this.labelBarTop.TabIndex = 16;
+            this.labelBarTop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MouseDownDrag);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DimGray;
+            this.label1.Location = new System.Drawing.Point(355, 396);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(68, 25);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "Clear";
+            this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MouseDownDrag);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Cursor = System.Windows.Forms.Cursors.Default;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.DimGray;
+            this.label4.Location = new System.Drawing.Point(434, 396);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(93, 25);
+            this.label4.TabIndex = 20;
+            this.label4.Text = "Options";
+            this.label4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MouseDownDrag);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 31F);
@@ -404,20 +425,23 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.ClientSize = new System.Drawing.Size(845, 454);
             this.ContextMenuStrip = this.contextMenuStripForm;
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.pictureBoxOptions);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.pictureBoxClear);
             this.Controls.Add(this.pictureBoxStatus);
-            this.Controls.Add(this.checkBoxStartMenuShorts);
+            this.Controls.Add(this.pictureBoxAbout);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBoxCloseFormBg);
             this.Controls.Add(this.pictureBoxMin);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.labelBarTop);
+            this.Controls.Add(this.labelBarBottom);
+            this.Controls.Add(this.labelBarLeft);
+            this.Controls.Add(this.labelBarRight);
             this.Controls.Add(this.labelSelectedPrefix);
             this.Controls.Add(this.labelTitle);
-            this.Controls.Add(this.pictureBoxAbout);
-            this.Controls.Add(this.checkBoxStartWithWin);
-            this.Controls.Add(this.checkBoxShowOnNew);
             this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.buttonClearList);
             this.Controls.Add(this.labelDeviceSelected);
             this.Font = new System.Drawing.Font("Segoe UI", 9.857143F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.DarkSlateGray;
@@ -440,6 +464,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxStatus)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAbout)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClear)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOptions)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcherAlreadyRunning)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -450,31 +476,34 @@
         private System.IO.FileSystemWatcher fileSystemWatcherUSBLog;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.ComponentModel.BackgroundWorker backgroundWorkerUSBLog;
-        private System.Windows.Forms.Button buttonClearList;
         public System.Windows.Forms.NotifyIcon notifyIconConnected;
         public System.Windows.Forms.NotifyIcon notifyIconDisconnected;
         public System.Windows.Forms.ContextMenuStrip contextMenuStripTray;
         public System.Windows.Forms.NotifyIcon notifyIconUnknown;
         public System.Windows.Forms.Label labelDeviceSelected;
         public System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.CheckBox checkBoxShowOnNew;
         private System.Windows.Forms.PictureBox pictureBoxStatus;
         private System.Windows.Forms.PictureBox pictureBoxMin;
         private System.Windows.Forms.PictureBox pictureBoxCloseFormBg;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ToolTip toolTipForm1;
-        private System.Windows.Forms.CheckBox checkBoxStartWithWin;
         private System.Windows.Forms.PictureBox pictureBoxAbout;
         private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.Label labelSelectedPrefix;
         private System.Windows.Forms.ContextMenuStrip contextMenuStripForm;
         private System.Windows.Forms.ToolStripMenuItem toTrayToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.CheckBox checkBoxStartMenuShorts;
         private System.IO.FileSystemWatcher fileSystemWatcherAlreadyRunning;
         private System.Windows.Forms.ToolStripMenuItem showHideToolStripMenuItem;
+        private System.Windows.Forms.Label labelBarRight;
+        private System.Windows.Forms.Label labelBarBottom;
+        private System.Windows.Forms.Label labelBarLeft;
+        private System.Windows.Forms.Label labelBarTop;
+        private System.Windows.Forms.PictureBox pictureBoxClear;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.PictureBox pictureBoxOptions;
     }
 }
 

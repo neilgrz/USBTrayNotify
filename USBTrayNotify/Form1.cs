@@ -20,9 +20,9 @@ namespace USBTrayNotify
         private string USBPlug;
         private string ToggleTray;
         private bool NewDevice;
-        private bool ShowOnNew;
         private bool StartWithWindows;
         private bool StartMenuShorts;
+        private bool ShowOnNew;
 
 
         //Border
@@ -45,6 +45,7 @@ namespace USBTrayNotify
             //CustomDevicesFile = "USBTrayNotifyCustomDevices.dat";
             USBFriendlyName = Properties.USBTrayNotify.Default.USBFriendlyName;
             ShowOnNew = Properties.USBTrayNotify.Default.ShowOnNew;
+            contextMenuStripForm.Renderer = contextMenuStripTray.Renderer = new NewRenderer();
 
             ListboxLoad(); CheckBoxOnNew(); CheckBoxStartOnWindows(); CheckBoxStartMenuShorts(); SetStatus();
 
@@ -55,7 +56,7 @@ namespace USBTrayNotify
             FormLocation();
         }
 
-
+  
         //Form hiding, showing, exiting, moving, location
         private void Form1HideOnStart(object sender, EventArgs e)
         {
@@ -152,6 +153,19 @@ namespace USBTrayNotify
             Properties.USBTrayNotify.Default.Save();
 
             Exit();
+        }
+
+        //Context menu colors
+        private class NewRenderer : ToolStripProfessionalRenderer
+        {
+            public NewRenderer() : base(new NewColors()) { }
+        }
+        private class NewColors : ProfessionalColorTable
+        {
+            public override Color MenuItemSelected
+            {
+                get { return Color.Gainsboro; }
+            }
         }
 
         //Minimize on taskbar icon click when active
@@ -251,10 +265,10 @@ namespace USBTrayNotify
                 File.Create(DeviceSelectFile).Dispose();
             }
 
+            ShowOnNew = Properties.USBTrayNotify.Default.ShowOnNew;
             string USBFriendlyName = Properties.USBTrayNotify.Default.USBFriendlyName;
             string USBLogViewAll = File.ReadAllText(USBLogViewLog);
             //string CustomDevicesAll = File.ReadAllText(CustomDevicesFile);
-
             string[] USBLogViewLines = File.ReadAllLines(USBLogViewLog);
             foreach (var lines in USBLogViewLines)
             {
@@ -482,76 +496,28 @@ namespace USBTrayNotify
         }
 
         //About
-        About _form = new About();
+        About _AboutForm = new About();
         private void pictureBoxAbout_Click(object sender, EventArgs e)
         {
-            _form.Show();
+            _AboutForm.Show();
         }
 
-        //Checkbox ShowOnNew
-        private void checkBoxShowOnNew_CheckedChanged(object sender, EventArgs e)
+        //Options
+        Options _OptionsForm = new Options();
+        private void pictureBoxOptions_Click(object sender, EventArgs e)
         {
-            if (checkBoxShowOnNew.Checked)
-            {
-                ShowOnNew = true;
-                Properties.USBTrayNotify.Default.ShowOnNew = true;
-                Properties.USBTrayNotify.Default.Save();
-            }
-            else
-            {
-                ShowOnNew = false;
-                Properties.USBTrayNotify.Default.ShowOnNew = false;
-                Properties.USBTrayNotify.Default.Save();
-            }
-        }
-        private void CheckBoxOnNew()
-        {
-            if (Properties.USBTrayNotify.Default.ShowOnNew == true)
-            {
-                ShowOnNew = true;
-                checkBoxShowOnNew.Checked = true;
-            }
+            _OptionsForm.Show();
         }
 
-        //Checkbox Start with Windows
-        private void checkBoxStartWithWin_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBoxStartWithWin.Checked)
-            {
-                StartWithWindows = true;
-                Properties.USBTrayNotify.Default.StartWithWindows = true;
-                Properties.USBTrayNotify.Default.Save();
-                Console.WriteLine(StartWithWindows);
-
-                //RegistryKey key = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
-                //key.SetValue("USBTrayNotify", Application.ExecutablePath);
-
-                StartupShortcut();
-            }
-            else
-            {
-                StartWithWindows = false;
-                Properties.USBTrayNotify.Default.StartWithWindows = false;
-                Properties.USBTrayNotify.Default.Save();
-
-                //RegistryKey key = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
-                //key.DeleteValue("USBTrayNotify", false);
-
-                string link = Environment.GetFolderPath(Environment.SpecialFolder.Startup) + Path.DirectorySeparatorChar + Application.ProductName + ".lnk";
-                File.Delete(link);
-            }
-        }
+        //Start with Windows
         private void CheckBoxStartOnWindows()
         {
             if (Properties.USBTrayNotify.Default.StartWithWindows == true)
             {
                 StartWithWindows = true;
-                checkBoxStartWithWin.Checked = true;
-
-                //RegistryKey key = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
-                //key.SetValue("USBTrayNotify", Application.ExecutablePath);
-
+                //checkBoxStartWithWin.Checked = true;
                 StartupShortcut();
+                Console.WriteLine(StartWithWindows);
             }
         }
         private static void StartupShortcut()
@@ -564,36 +530,15 @@ namespace USBTrayNotify
             startshortcut.Save();
         }
 
-        //Checkbox Start Menu Shortcuts
-        private void checkBoxStartMenuShorts_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBoxStartMenuShorts.Checked)
-            {
-                StartMenuShorts = true;
-                Properties.USBTrayNotify.Default.StartMenuShorts = true;
-                Properties.USBTrayNotify.Default.Save();
-                Console.WriteLine(StartMenuShorts);
-
-                StartMenuShortsAdd();
-            }
-            else
-            {
-                StartMenuShorts = false;
-                Properties.USBTrayNotify.Default.StartMenuShorts = false;
-                Properties.USBTrayNotify.Default.Save();
-
-                string link = Environment.GetFolderPath(Environment.SpecialFolder.StartMenu) + Path.DirectorySeparatorChar + Application.ProductName + ".lnk";
-                File.Delete(link);
-            }
-        }
+        //Start Menu Shortcuts
         private void CheckBoxStartMenuShorts()
         {
             if (Properties.USBTrayNotify.Default.StartMenuShorts == true)
             {
                 StartMenuShorts = true;
-                checkBoxStartMenuShorts.Checked = true;
-
+                //checkBoxStartMenuShorts.Checked = true;
                 StartMenuShortsAdd();
+                Console.WriteLine(StartMenuShorts);
             }
         }
         private static void StartMenuShortsAdd()
@@ -606,6 +551,16 @@ namespace USBTrayNotify
             startshortcut.WorkingDirectory = Application.StartupPath;
             startshortcut.Save();
         }
+
+        //ShowOnNew
+        private void CheckBoxOnNew()
+        {
+            if (Properties.USBTrayNotify.Default.ShowOnNew == true)
+            {
+                ShowOnNew = true;
+            }
+        }
+
 
         //If already running, show
         private void fileSystemWatcherAlreadyRunning_Created(object sender, FileSystemEventArgs e)
@@ -658,6 +613,22 @@ namespace USBTrayNotify
         {
             showHideToolStripMenuItem.Image = global::USBTrayNotify.Properties.Resources.ShowHide;
             pictureBoxMin.Image = global::USBTrayNotify.Properties.Resources.USBTrayNotifyMinForm;
+        }
+        private void pictureBoxClear_MouseEnter(object sender, EventArgs e)
+        {
+            pictureBoxClear.Image = global::USBTrayNotify.Properties.Resources.USBTrayNotifyClearHov;
+        }
+        private void pictureBoxClear_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBoxClear.Image = global::USBTrayNotify.Properties.Resources.USBTrayNotifyClear;
+        }
+        private void pictureBoxOptions_MouseEnter(object sender, EventArgs e)
+        {
+            pictureBoxOptions.Image = global::USBTrayNotify.Properties.Resources.USBTrayNotifyOptionsHov;
+        }
+        private void pictureBoxOptions_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBoxOptions.Image = global::USBTrayNotify.Properties.Resources.USBTrayNotifyOptions;
         }
     }
 }

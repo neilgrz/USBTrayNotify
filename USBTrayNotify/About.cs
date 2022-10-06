@@ -86,5 +86,10 @@ namespace USBTrayNotify
                 return cp;
             }
         }
+
+        private void About_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

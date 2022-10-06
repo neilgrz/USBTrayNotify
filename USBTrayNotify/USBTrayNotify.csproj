@@ -77,6 +77,12 @@
     <Compile Include="About.Designer.cs">
       <DependentUpon>About.cs</DependentUpon>
     </Compile>
+    <Compile Include="Options.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Options.Designer.cs">
+      <DependentUpon>Options.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -104,6 +110,9 @@
       <DependentUpon>Form1.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Options.resx">
+      <DependentUpon>Options.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
@@ -130,6 +139,11 @@
     <None Include="Icons\form\USBTrayNotifyAboutHov.png" />
     <None Include="Icons\form\ShowHide.png" />
     <None Include="Icons\form\ShowHideHov.png" />
+    <None Include="Icons\form\USBTrayNotifyClearHov.png" />
+    <None Include="Icons\form\USBTrayNotifyClearButton.png" />
+    <None Include="Icons\form\USBTrayNotifyOptions.png" />
+    <None Include="Icons\form\USBTrayNotifyOptionsHov.png" />
+    <None Include="Icons\form\USBTrayNotifyCloseFormBg.png" />
     <Content Include="USBconnectedNC.ico" />
     <None Include="USBLogView\USBLogView.cfg" />
     <None Include="USBLogView\USBLogView.exe" />
@@ -143,7 +157,6 @@
     <Content Include="Icons\form\USBdisconnected.png" />
     <None Include="Icons\form\USBTrayNotifyAbout.png" />
     <None Include="Icons\form\USBTrayNotifyClear.png" />
-    <Content Include="Icons\form\USBTrayNotifyCloseFormBg.png" />
     <Content Include="Icons\form\USBTrayNotifyMinForm.png" />
     <Content Include="Icons\form\USBunknown.png" />
     <None Include="Icons\USBconnectedNC.ico" />

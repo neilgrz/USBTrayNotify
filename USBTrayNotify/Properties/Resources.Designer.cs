@@ -239,6 +239,26 @@ namespace USBTrayNotify.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap USBTrayNotifyClearButton {
+            get {
+                object obj = ResourceManager.GetObject("USBTrayNotifyClearButton", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap USBTrayNotifyClearHov {
+            get {
+                object obj = ResourceManager.GetObject("USBTrayNotifyClearHov", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap USBTrayNotifyCloseFormBg {
             get {
                 object obj = ResourceManager.GetObject("USBTrayNotifyCloseFormBg", resourceCulture);
@@ -272,6 +292,26 @@ namespace USBTrayNotify.Properties {
         internal static System.Drawing.Bitmap USBTrayNotifyMinFormHov {
             get {
                 object obj = ResourceManager.GetObject("USBTrayNotifyMinFormHov", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap USBTrayNotifyOptions {
+            get {
+                object obj = ResourceManager.GetObject("USBTrayNotifyOptions", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap USBTrayNotifyOptionsHov {
+            get {
+                object obj = ResourceManager.GetObject("USBTrayNotifyOptionsHov", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
