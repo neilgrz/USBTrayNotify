@@ -45,7 +45,7 @@ namespace USBTrayNotify
             //CustomDevicesFile = "USBTrayNotifyCustomDevices.dat";
             USBFriendlyName = Properties.USBTrayNotify.Default.USBFriendlyName;
             ShowOnNew = Properties.USBTrayNotify.Default.ShowOnNew;
-            contextMenuStripForm.Renderer = contextMenuStripTray.Renderer = new NewRenderer();
+            //contextMenuStripForm.Renderer = contextMenuStripTray.Renderer = new NewRenderer();
 
             ListboxLoad(); CheckBoxOnNew(); CheckBoxStartOnWindows(); CheckBoxStartMenuShorts(); SetStatus();
 
@@ -155,18 +155,18 @@ namespace USBTrayNotify
             Exit();
         }
 
-        //Context menu colors
-        private class NewRenderer : ToolStripProfessionalRenderer
-        {
-            public NewRenderer() : base(new NewColors()) { }
-        }
-        private class NewColors : ProfessionalColorTable
-        {
-            public override Color MenuItemSelected
-            {
-                get { return Color.Gainsboro; }
-            }
-        }
+        ////Context menu colors
+        //private class NewRenderer : ToolStripProfessionalRenderer
+        //{
+        //    public NewRenderer() : base(new NewColors()) { }
+        //}
+        //private class NewColors : ProfessionalColorTable
+        //{
+        //    public override Color MenuItemSelected
+        //    {
+        //        get { return Color.Gainsboro; }
+        //    }
+        //}
 
         //Minimize on taskbar icon click when active
         const int WS_MINIMIZEBOX = 0x20000;
