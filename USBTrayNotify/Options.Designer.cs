@@ -124,9 +124,9 @@
             this.labelTitleOptions.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTitleOptions.Location = new System.Drawing.Point(140, 4);
             this.labelTitleOptions.Name = "labelTitleOptions";
-            this.labelTitleOptions.Size = new System.Drawing.Size(252, 30);
+            this.labelTitleOptions.Size = new System.Drawing.Size(266, 30);
             this.labelTitleOptions.TabIndex = 1;
-            this.labelTitleOptions.Text = "USB Tray Notify Options";
+            this.labelTitleOptions.Text = "Options - USB Tray Notify";
             this.labelTitleOptions.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MouseDownDrag);
             // 
             // pictureBoxCloseOptions
