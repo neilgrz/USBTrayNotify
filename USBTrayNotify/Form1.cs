@@ -3,7 +3,6 @@ using System;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Drawing;
-using System.Drawing.Drawing2D;
 using System.IO;
 using System.Runtime.InteropServices;
 using System.Threading;
@@ -29,7 +28,6 @@ namespace USBTrayNotify
         //Border
         protected override void OnPaint(PaintEventArgs e)
         {
-            //ControlPaint.DrawBorder(e.Graphics, ClientRectangle, Color.DarkGray, ButtonBorderStyle.Solid);
             ControlPaint.DrawBorder(e.Graphics, this.ClientRectangle, Color.DarkGray, 1, ButtonBorderStyle.Solid, Color.DarkGray, 1, ButtonBorderStyle.Solid, Color.DarkGray, 1, ButtonBorderStyle.Solid, Color.DarkGray, 1, ButtonBorderStyle.Solid);
         }
 
@@ -38,13 +36,13 @@ namespace USBTrayNotify
             InitializeComponent();
         }
 
+
         //Form Load
         private void Form1Load(object sender, EventArgs e)
         {
             USBLogViewLog = "USBLogView.log";
             DeviceSelectFile = "USBTrayNotifySelect.dat";
             //CustomDevicesFile = "USBTrayNotifyCustomDevices.dat";
-
             USBFriendlyName = Properties.USBTrayNotify.Default.USBFriendlyName;
             ShowOnNew = Properties.USBTrayNotify.Default.ShowOnNew;
 
@@ -70,7 +68,6 @@ namespace USBTrayNotify
                 Hide();
             }
         }
-
         public void ToggleForm()
         {
             Show();
@@ -113,17 +110,8 @@ namespace USBTrayNotify
                 return;
             }
         }
-        void MenuExit_Click(object sender, EventArgs e)
-        {
-            Exit();
-        }
-        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Properties.USBTrayNotify.Default.Form1Location = Location;
-            Properties.USBTrayNotify.Default.Save();
-
-            Exit();
-        }
+        
+        //Exit and kill USBLogView and refresh system tray
         private void Exit()
         {
             foreach (var process in Process.GetProcessesByName("USBLogView"))
@@ -138,6 +126,12 @@ namespace USBTrayNotify
             Hide();
             WindowState = FormWindowState.Minimized;
         }
+        void MenuExit_Click(object sender, EventArgs e)
+        {
+            Exit();
+        }
+
+        //Save window location
         private void FormLocation()
         {
             if (Properties.USBTrayNotify.Default.FirstRun == true && Properties.USBTrayNotify.Default.Form1Location.X == 0 && Properties.USBTrayNotify.Default.Form1Location.Y == 0)
@@ -151,6 +145,15 @@ namespace USBTrayNotify
                 Location = Properties.USBTrayNotify.Default.Form1Location;
             }
         }
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Properties.USBTrayNotify.Default.Form1Location = Location;
+            Properties.USBTrayNotify.Default.Save();
+
+            Exit();
+        }
+
         //Minimize on taskbar icon click when active
         const int WS_MINIMIZEBOX = 0x20000;
         const int CS_DBLCLKS = 0x8;
@@ -164,7 +167,6 @@ namespace USBTrayNotify
                 return cp;
             }
         }
-
 
         //Mouse drag
         [DllImport("user32")]
@@ -226,12 +228,12 @@ namespace USBTrayNotify
         }
 
 
-        //Monitor for connect and disconnect
+        //Watch log for connect and disconnect
         public void fileSystemWatcher1_Changed(object sender, FileSystemEventArgs e)
         {
-            if (backgroundWorker1.IsBusy != true)
+            if (backgroundWorkerUSBLog.IsBusy != true)
             {
-                backgroundWorker1.RunWorkerAsync();
+                backgroundWorkerUSBLog.RunWorkerAsync();
             }
         }
 
@@ -253,27 +255,17 @@ namespace USBTrayNotify
             string USBLogViewAll = File.ReadAllText(USBLogViewLog);
             //string CustomDevicesAll = File.ReadAllText(CustomDevicesFile);
 
-            //if (USBLogViewAll.Contains("USBTrayNotifyAlreadyRunning"))
-            //{
-            //    AlreadyRunning = true;
-            //    File.Delete(USBLogViewLog);
-            //    return;
-            //}
-
             string[] USBLogViewLines = File.ReadAllLines(USBLogViewLog);
             foreach (var lines in USBLogViewLines)
             {
                 string[] USBLogViewDeviceStrip = lines.Split(',');
-
                 string vendorNoQuotes = USBLogViewDeviceStrip[9];
                 string[] charsToRemove = new string[] { "\"" };
                 foreach (var c in charsToRemove)
                 {
                     vendorNoQuotes = vendorNoQuotes.Replace(c, string.Empty);
                 }
-
                 string USBLogViewDevicePlugOrUnPlug = USBLogViewDeviceStrip[0];
-
                 string USBLogViewDevice = USBLogViewDeviceStrip[3] + " " + USBLogViewDeviceStrip[4] + " " + vendorNoQuotes;
                 string DeviceSelectFileDevices = File.ReadAllText(DeviceSelectFile);
 
@@ -335,7 +327,6 @@ namespace USBTrayNotify
                         ToggleTray = "unknown";
                     }
                 }
-
                 //else
                 //if (USBLogViewAll.Contains(CustomDevicesAll) && USBLogViewDevicePlugOrUnPlug == "Plug")
                 //{
@@ -362,10 +353,8 @@ namespace USBTrayNotify
                 //    }
                 //    return;
                 //}
-
             }
         }
-
 
         private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
@@ -424,7 +413,6 @@ namespace USBTrayNotify
             }
         }
 
-
         //Set status UI on form
         private void SetStatus()
         {
@@ -476,10 +464,7 @@ namespace USBTrayNotify
             labelSelectedPrefix.Text = ("Status: Unknown");
             pictureBoxStatus.Image = Properties.Resources.USBunknown;
             this.Icon = Properties.Resources.USBunknownNC;
-            //Hide();
-            //SetStatus();
         }
-
 
         //Custom Add and Clear list
         //private void buttonCustomAdd_Click(object sender, EventArgs e)
@@ -496,6 +481,12 @@ namespace USBTrayNotify
             listBox1.Text = "No Device";
         }
 
+        //About
+        About _form = new About();
+        private void pictureBoxAbout_Click(object sender, EventArgs e)
+        {
+            _form.Show();
+        }
 
         //Checkbox ShowOnNew
         private void checkBoxShowOnNew_CheckedChanged(object sender, EventArgs e)
@@ -521,16 +512,6 @@ namespace USBTrayNotify
                 checkBoxShowOnNew.Checked = true;
             }
         }
-
-
-        //About
-
-        About _form = new About();
-        private void pictureBoxAbout_Click(object sender, EventArgs e)
-        {
-            _form.Show();
-        }
-
 
         //Checkbox Start with Windows
         private void checkBoxStartWithWin_CheckedChanged(object sender, EventArgs e)
@@ -560,7 +541,6 @@ namespace USBTrayNotify
                 File.Delete(link);
             }
         }
-
         private void CheckBoxStartOnWindows()
         {
             if (Properties.USBTrayNotify.Default.StartWithWindows == true)
@@ -574,7 +554,6 @@ namespace USBTrayNotify
                 StartupShortcut();
             }
         }
-
         private static void StartupShortcut()
         {
             string link = Environment.GetFolderPath(Environment.SpecialFolder.Startup) + Path.DirectorySeparatorChar + Application.ProductName + ".lnk";
@@ -584,7 +563,6 @@ namespace USBTrayNotify
             startshortcut.WorkingDirectory = Application.StartupPath;
             startshortcut.Save();
         }
-
 
         //Checkbox Start Menu Shortcuts
         private void checkBoxStartMenuShorts_CheckedChanged(object sender, EventArgs e)
@@ -629,6 +607,7 @@ namespace USBTrayNotify
             startshortcut.Save();
         }
 
+        //If already running, show
         private void fileSystemWatcherAlreadyRunning_Created(object sender, FileSystemEventArgs e)
         {
             if (File.Exists("AlreadyRunning.log"))
@@ -639,55 +618,46 @@ namespace USBTrayNotify
             }
         }
 
-
         //Mouse hover
         private void pictureBoxMin_MouseEnter(object sender, EventArgs e)
         {
             pictureBoxMin.Image = global::USBTrayNotify.Properties.Resources.USBTrayNotifyMinFormHov;
             toTrayToolStripMenuItem.Image = global::USBTrayNotify.Properties.Resources.USBTrayNotifyMinFormHov;
         }
-
         private void pictureBoxMin_MouseLeave(object sender, EventArgs e)
         {
             pictureBoxMin.Image = global::USBTrayNotify.Properties.Resources.USBTrayNotifyMinForm;
             toTrayToolStripMenuItem.Image = global::USBTrayNotify.Properties.Resources.USBTrayNotifyMinForm;
         }
-
         private void pictureBoxCloseFormBg_MouseEnter(object sender, EventArgs e)
         {
             pictureBoxCloseFormBg.Image = global::USBTrayNotify.Properties.Resources.USBTrayNotifyCloseFormBgHov;
             exitToolStripMenuItem.Image = global::USBTrayNotify.Properties.Resources.USBTrayNotifyCloseFormBgHov;
             exitToolStripMenuItem1.Image = global::USBTrayNotify.Properties.Resources.USBTrayNotifyCloseFormBgHov;
         }
-
         private void pictureBoxCloseFormBg_MouseLeave(object sender, EventArgs e)
         {
             pictureBoxCloseFormBg.Image = global::USBTrayNotify.Properties.Resources.USBTrayNotifyCloseFormBg;
             exitToolStripMenuItem.Image = global::USBTrayNotify.Properties.Resources.USBTrayNotifyCloseFormBg;
             exitToolStripMenuItem1.Image = global::USBTrayNotify.Properties.Resources.USBTrayNotifyCloseFormBg;
         }
-
         private void pictureBoxAbout_MouseEnter(object sender, EventArgs e)
         {
             pictureBoxAbout.Image = global::USBTrayNotify.Properties.Resources.USBTrayNotifyAboutHov;
         }
-
         private void pictureBoxAbout_MouseLeave(object sender, EventArgs e)
         {
             pictureBoxAbout.Image = global::USBTrayNotify.Properties.Resources.USBTrayNotifyAbout;
         }
-
         private void showHideToolStripMenuItem_MouseEnter(object sender, EventArgs e)
         {
             showHideToolStripMenuItem.Image = global::USBTrayNotify.Properties.Resources.ShowHideHov;
             pictureBoxMin.Image = global::USBTrayNotify.Properties.Resources.USBTrayNotifyMinFormHov;
         }
-
         private void showHideToolStripMenuItem_MouseLeave(object sender, EventArgs e)
         {
             showHideToolStripMenuItem.Image = global::USBTrayNotify.Properties.Resources.ShowHide;
             pictureBoxMin.Image = global::USBTrayNotify.Properties.Resources.USBTrayNotifyMinForm;
         }
     }
-
 }

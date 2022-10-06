@@ -44,12 +44,7 @@ namespace USBTrayNotify
             }
         }
 
-        private void About_Load(object sender, EventArgs e)
-        {
-            ContextMenuStrip = contextMenuStrip1;
-            contextMenuStrip1.Show();
-        }
-
+        //Close
         private void pictureBoxCloseAbout_Click(object sender, EventArgs e)
         {
             Hide();

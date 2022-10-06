@@ -7,13 +7,10 @@ namespace USBTrayNotify
 {
     internal static class Program
     {
-        /// <summary>
-        /// The main entry point for the application.
-        /// </summary>
         [STAThread]
         static void Main()
-
         {
+            //If already running, drop file, exit
             if (Process.GetProcessesByName(Process.GetCurrentProcess().ProcessName).Length > 1)
             {
                 File.Create("AlreadyRunning.log").Dispose();

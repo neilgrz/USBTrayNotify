@@ -34,8 +34,8 @@
             this.pictureBoxCloseAbout = new System.Windows.Forms.PictureBox();
             this.labelAboutInfo = new System.Windows.Forms.Label();
             this.linkLabelAbout = new System.Windows.Forms.LinkLabel();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolTipAbout = new System.Windows.Forms.ToolTip(this.components);
+            this.contextMenuStripAbout = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -46,7 +46,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCloseAbout)).BeginInit();
-            this.contextMenuStrip1.SuspendLayout();
+            this.contextMenuStripAbout.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -102,22 +102,22 @@
             this.linkLabelAbout.TabIndex = 0;
             this.linkLabelAbout.TabStop = true;
             this.linkLabelAbout.Text = "https://github.com/neilgrz/USBTrayNotify";
-            this.toolTip1.SetToolTip(this.linkLabelAbout, "GitHub Repository");
+            this.toolTipAbout.SetToolTip(this.linkLabelAbout, "GitHub Repository");
             this.linkLabelAbout.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelAbout_LinkClicked);
             // 
-            // toolTip1
+            // toolTipAbout
             // 
-            this.toolTip1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.toolTip1.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.toolTip1.IsBalloon = true;
+            this.toolTipAbout.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.toolTipAbout.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.toolTipAbout.IsBalloon = true;
             // 
-            // contextMenuStrip1
+            // contextMenuStripAbout
             // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(28, 28);
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.contextMenuStripAbout.ImageScalingSize = new System.Drawing.Size(28, 28);
+            this.contextMenuStripAbout.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.exitToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(152, 60);
+            this.contextMenuStripAbout.Name = "contextMenuStrip1";
+            this.contextMenuStripAbout.Size = new System.Drawing.Size(152, 60);
             // 
             // exitToolStripMenuItem
             // 
@@ -221,6 +221,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.ClientSize = new System.Drawing.Size(429, 310);
+            this.ContextMenuStrip = this.contextMenuStripAbout;
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -242,9 +243,8 @@
             this.Name = "About";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "About";
-            this.Load += new System.EventHandler(this.About_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCloseAbout)).EndInit();
-            this.contextMenuStrip1.ResumeLayout(false);
+            this.contextMenuStripAbout.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -260,8 +260,8 @@
         private System.Windows.Forms.PictureBox pictureBoxCloseAbout;
         private System.Windows.Forms.Label labelAboutInfo;
         private System.Windows.Forms.LinkLabel linkLabelAbout;
-        private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolTip toolTipAbout;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStripAbout;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
