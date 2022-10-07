@@ -61,6 +61,12 @@
             this.labelBarTop = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.BottomToolStripPanel = new System.Windows.Forms.ToolStripPanel();
+            this.TopToolStripPanel = new System.Windows.Forms.ToolStripPanel();
+            this.RightToolStripPanel = new System.Windows.Forms.ToolStripPanel();
+            this.LeftToolStripPanel = new System.Windows.Forms.ToolStripPanel();
+            this.ContentPanel = new System.Windows.Forms.ToolStripContentPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcherUSBLog)).BeginInit();
             this.contextMenuStripTray.SuspendLayout();
             this.contextMenuStripForm.SuspendLayout();
@@ -98,7 +104,7 @@
             this.showHideToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.contextMenuStripTray.Name = "contextMenuStrip1";
-            this.contextMenuStripTray.Size = new System.Drawing.Size(285, 114);
+            this.contextMenuStripTray.Size = new System.Drawing.Size(156, 76);
             this.contextMenuStripTray.Text = "USBTrayNotify";
             // 
             // showHideToolStripMenuItem
@@ -154,7 +160,7 @@
             this.toTrayToolStripMenuItem,
             this.exitToolStripMenuItem1});
             this.contextMenuStripForm.Name = "contextMenuStripForm";
-            this.contextMenuStripForm.Size = new System.Drawing.Size(150, 76);
+            this.contextMenuStripForm.Size = new System.Drawing.Size(118, 76);
             // 
             // toTrayToolStripMenuItem
             // 
@@ -206,14 +212,14 @@
             // 
             // listBox1
             // 
-            this.listBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
+            this.listBox1.BackColor = System.Drawing.Color.White;
             this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listBox1.Cursor = System.Windows.Forms.Cursors.Default;
             this.listBox1.Font = new System.Drawing.Font("Segoe UI", 11.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.listBox1.FormattingEnabled = true;
             this.listBox1.HorizontalScrollbar = true;
-            this.listBox1.ItemHeight = 36;
+            this.listBox1.ItemHeight = 20;
             this.listBox1.Location = new System.Drawing.Point(41, 140);
             this.listBox1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.listBox1.Name = "listBox1";
@@ -228,7 +234,7 @@
             this.label2.Font = new System.Drawing.Font("Segoe UI", 8.142858F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(732, 3);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 28);
+            this.label2.Size = new System.Drawing.Size(27, 13);
             this.label2.TabIndex = 4;
             this.label2.Text = "Tray";
             // 
@@ -238,12 +244,13 @@
             this.label3.Font = new System.Drawing.Font("Segoe UI", 8.142858F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(790, 3);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 28);
+            this.label3.Size = new System.Drawing.Size(25, 13);
             this.label3.TabIndex = 5;
             this.label3.Text = "Exit";
             // 
             // pictureBoxCloseFormBg
             // 
+            this.pictureBoxCloseFormBg.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxCloseFormBg.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxCloseFormBg.Image = global::USBTrayNotify.Properties.Resources.USBTrayNotifyCloseFormBg;
             this.pictureBoxCloseFormBg.Location = new System.Drawing.Point(777, 8);
@@ -259,6 +266,7 @@
             // 
             // pictureBoxMin
             // 
+            this.pictureBoxMin.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxMin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxMin.Image = global::USBTrayNotify.Properties.Resources.USBTrayNotifyMinForm;
             this.pictureBoxMin.Location = new System.Drawing.Point(721, 8);
@@ -274,6 +282,7 @@
             // 
             // pictureBoxStatus
             // 
+            this.pictureBoxStatus.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxStatus.Image = global::USBTrayNotify.Properties.Resources.USBunknown;
             this.pictureBoxStatus.Location = new System.Drawing.Point(5, 5);
             this.pictureBoxStatus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -293,7 +302,7 @@
             // 
             // pictureBoxAbout
             // 
-            this.pictureBoxAbout.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxAbout.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pictureBoxAbout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBoxAbout.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxAbout.Image = global::USBTrayNotify.Properties.Resources.USBTrayNotifyAbout;
@@ -310,6 +319,7 @@
             // 
             // pictureBoxClear
             // 
+            this.pictureBoxClear.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pictureBoxClear.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxClear.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxClear.Image")));
             this.pictureBoxClear.Location = new System.Drawing.Point(350, 344);
@@ -325,6 +335,7 @@
             // 
             // pictureBoxOptions
             // 
+            this.pictureBoxOptions.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pictureBoxOptions.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxOptions.Image = global::USBTrayNotify.Properties.Resources.USBTrayNotifyOptions;
             this.pictureBoxOptions.Location = new System.Drawing.Point(437, 345);
@@ -344,13 +355,14 @@
             this.labelTitle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTitle.Location = new System.Drawing.Point(369, 5);
             this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(168, 30);
+            this.labelTitle.Size = new System.Drawing.Size(95, 15);
             this.labelTitle.TabIndex = 9;
             this.labelTitle.Text = "USB Tray Notify";
             this.labelTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MouseDownDrag);
             // 
             // labelSelectedPrefix
             // 
+            this.labelSelectedPrefix.BackColor = System.Drawing.Color.WhiteSmoke;
             this.labelSelectedPrefix.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSelectedPrefix.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.labelSelectedPrefix.Location = new System.Drawing.Point(338, 46);
@@ -410,12 +422,13 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label1.Cursor = System.Windows.Forms.Cursors.Default;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DimGray;
             this.label1.Location = new System.Drawing.Point(355, 396);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 25);
+            this.label1.Size = new System.Drawing.Size(41, 15);
             this.label1.TabIndex = 1;
             this.label1.Text = "Clear";
             this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MouseDownDrag);
@@ -423,19 +436,70 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label4.Cursor = System.Windows.Forms.Cursors.Default;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.DimGray;
             this.label4.Location = new System.Drawing.Point(434, 396);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(93, 25);
+            this.label4.Size = new System.Drawing.Size(56, 15);
             this.label4.TabIndex = 2;
             this.label4.Text = "Options";
             this.label4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MouseDownDrag);
             // 
+            // BottomToolStripPanel
+            // 
+            this.BottomToolStripPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.BottomToolStripPanel.Location = new System.Drawing.Point(0, 175);
+            this.BottomToolStripPanel.Name = "BottomToolStripPanel";
+            this.BottomToolStripPanel.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.BottomToolStripPanel.RowMargin = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.BottomToolStripPanel.Size = new System.Drawing.Size(150, 0);
+            // 
+            // TopToolStripPanel
+            // 
+            this.TopToolStripPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.TopToolStripPanel.Location = new System.Drawing.Point(0, 0);
+            this.TopToolStripPanel.Name = "TopToolStripPanel";
+            this.TopToolStripPanel.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.TopToolStripPanel.RowMargin = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.TopToolStripPanel.Size = new System.Drawing.Size(150, 25);
+            // 
+            // RightToolStripPanel
+            // 
+            this.RightToolStripPanel.Dock = System.Windows.Forms.DockStyle.Right;
+            this.RightToolStripPanel.Location = new System.Drawing.Point(150, 25);
+            this.RightToolStripPanel.Name = "RightToolStripPanel";
+            this.RightToolStripPanel.Orientation = System.Windows.Forms.Orientation.Vertical;
+            this.RightToolStripPanel.RowMargin = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.RightToolStripPanel.Size = new System.Drawing.Size(0, 150);
+            // 
+            // LeftToolStripPanel
+            // 
+            this.LeftToolStripPanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.LeftToolStripPanel.Location = new System.Drawing.Point(0, 25);
+            this.LeftToolStripPanel.Name = "LeftToolStripPanel";
+            this.LeftToolStripPanel.Orientation = System.Windows.Forms.Orientation.Vertical;
+            this.LeftToolStripPanel.RowMargin = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.LeftToolStripPanel.Size = new System.Drawing.Size(0, 150);
+            // 
+            // ContentPanel
+            // 
+            this.ContentPanel.Size = new System.Drawing.Size(150, 150);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Location = new System.Drawing.Point(14, 29);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(818, 413);
+            this.panel1.TabIndex = 20;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MouseDownDrag);
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 31F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.ClientSize = new System.Drawing.Size(845, 454);
@@ -458,6 +522,7 @@
             this.Controls.Add(this.labelTitle);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.labelDeviceSelected);
+            this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Segoe UI", 9.857143F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -519,6 +584,12 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBoxOptions;
         private System.Windows.Forms.ContextMenuStrip contextMenuStripTray;
+        private System.Windows.Forms.ToolStripPanel BottomToolStripPanel;
+        private System.Windows.Forms.ToolStripPanel TopToolStripPanel;
+        private System.Windows.Forms.ToolStripPanel RightToolStripPanel;
+        private System.Windows.Forms.ToolStripPanel LeftToolStripPanel;
+        private System.Windows.Forms.ToolStripContentPanel ContentPanel;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 

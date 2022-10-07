@@ -645,8 +645,5 @@ namespace USBTrayNotify
         {
             pictureBoxOptions.Image = global::USBTrayNotify.Properties.Resources.USBTrayNotifyOptions;
         }
-
-
-
     }
 }
