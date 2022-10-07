@@ -56,7 +56,7 @@
             this.contextMenuStripOptions.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.exitToolStripMenuItem});
             this.contextMenuStripOptions.Name = "contextMenuStrip1";
-            this.contextMenuStripOptions.Size = new System.Drawing.Size(124, 40);
+            this.contextMenuStripOptions.Size = new System.Drawing.Size(164, 40);
             // 
             // exitToolStripMenuItem
             // 
@@ -86,7 +86,7 @@
             this.checkBoxStartWithWin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.857143F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxStartWithWin.Location = new System.Drawing.Point(140, 67);
             this.checkBoxStartWithWin.Name = "checkBoxStartWithWin";
-            this.checkBoxStartWithWin.Size = new System.Drawing.Size(145, 21);
+            this.checkBoxStartWithWin.Size = new System.Drawing.Size(242, 33);
             this.checkBoxStartWithWin.TabIndex = 0;
             this.checkBoxStartWithWin.Text = "Start with Windows";
             this.toolTipOptions.SetToolTip(this.checkBoxStartWithWin, "Start USBTrayNotify when logging into Windows");
@@ -101,7 +101,7 @@
             this.checkBoxStartMenuShorts.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.857143F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxStartMenuShorts.Location = new System.Drawing.Point(140, 94);
             this.checkBoxStartMenuShorts.Name = "checkBoxStartMenuShorts";
-            this.checkBoxStartMenuShorts.Size = new System.Drawing.Size(151, 21);
+            this.checkBoxStartMenuShorts.Size = new System.Drawing.Size(244, 33);
             this.checkBoxStartMenuShorts.TabIndex = 1;
             this.checkBoxStartMenuShorts.Text = "Start Menu shortcut";
             this.toolTipOptions.SetToolTip(this.checkBoxStartMenuShorts, "Add or remove Start Menu shortcut for USBTrayNotify");
@@ -118,7 +118,7 @@
             this.checkBoxShowOnNew.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.checkBoxShowOnNew.Name = "checkBoxShowOnNew";
             this.checkBoxShowOnNew.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.checkBoxShowOnNew.Size = new System.Drawing.Size(162, 21);
+            this.checkBoxShowOnNew.Size = new System.Drawing.Size(273, 33);
             this.checkBoxShowOnNew.TabIndex = 2;
             this.checkBoxShowOnNew.Text = "Show on new devices";
             this.toolTipOptions.SetToolTip(this.checkBoxShowOnNew, "Show USB Tray Notify window when new unknown devices are connected");
@@ -131,7 +131,7 @@
             this.labelTitleOptions.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTitleOptions.Location = new System.Drawing.Point(140, 4);
             this.labelTitleOptions.Name = "labelTitleOptions";
-            this.labelTitleOptions.Size = new System.Drawing.Size(149, 15);
+            this.labelTitleOptions.Size = new System.Drawing.Size(266, 30);
             this.labelTitleOptions.TabIndex = 1;
             this.labelTitleOptions.Text = "Options - USB Tray Notify";
             this.labelTitleOptions.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MouseDownDrag);
@@ -202,15 +202,15 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Location = new System.Drawing.Point(13, 26);
+            this.panel1.Location = new System.Drawing.Point(13, 22);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(403, 172);
+            this.panel1.Size = new System.Drawing.Size(403, 176);
             this.panel1.TabIndex = 18;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MouseDownDrag);
             // 
             // Options
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.ClientSize = new System.Drawing.Size(429, 211);

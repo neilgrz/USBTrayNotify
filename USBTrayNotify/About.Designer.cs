@@ -64,7 +64,7 @@
             this.labelTitleAbout.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTitleAbout.Location = new System.Drawing.Point(189, 4);
             this.labelTitleAbout.Name = "labelTitleAbout";
-            this.labelTitleAbout.Size = new System.Drawing.Size(41, 15);
+            this.labelTitleAbout.Size = new System.Drawing.Size(75, 30);
             this.labelTitleAbout.TabIndex = 0;
             this.labelTitleAbout.Text = "About";
             this.labelTitleAbout.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MouseDownDrag);
@@ -92,7 +92,7 @@
             this.labelAboutInfo.Location = new System.Drawing.Point(137, 27);
             this.labelAboutInfo.Name = "labelAboutInfo";
             this.labelAboutInfo.Padding = new System.Windows.Forms.Padding(1);
-            this.labelAboutInfo.Size = new System.Drawing.Size(121, 44);
+            this.labelAboutInfo.Size = new System.Drawing.Size(212, 78);
             this.labelAboutInfo.TabIndex = 2;
             this.labelAboutInfo.Text = "USB Tray Notify\r\n        v1.0.0";
             this.labelAboutInfo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MouseDownDrag);
@@ -104,7 +104,7 @@
             this.linkLabelAbout.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabelAbout.Location = new System.Drawing.Point(92, 245);
             this.linkLabelAbout.Name = "linkLabelAbout";
-            this.linkLabelAbout.Size = new System.Drawing.Size(245, 17);
+            this.linkLabelAbout.Size = new System.Drawing.Size(437, 31);
             this.linkLabelAbout.TabIndex = 0;
             this.linkLabelAbout.TabStop = true;
             this.linkLabelAbout.Text = "https://github.com/neilgrz/USBTrayNotify";
@@ -125,7 +125,7 @@
             this.contextMenuStripAbout.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.exitToolStripMenuItem});
             this.contextMenuStripAbout.Name = "contextMenuStrip1";
-            this.contextMenuStripAbout.Size = new System.Drawing.Size(124, 40);
+            this.contextMenuStripAbout.Size = new System.Drawing.Size(164, 40);
             // 
             // exitToolStripMenuItem
             // 
@@ -204,7 +204,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(83, 184);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 16);
+            this.label2.Size = new System.Drawing.Size(130, 29);
             this.label2.TabIndex = 8;
             this.label2.Text = "Connected";
             this.label2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MouseDownDrag);
@@ -216,7 +216,7 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(170, 184);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(90, 16);
+            this.label3.Size = new System.Drawing.Size(160, 29);
             this.label3.TabIndex = 9;
             this.label3.Text = "Disconnected";
             this.label3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MouseDownDrag);
@@ -228,7 +228,7 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(277, 184);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(62, 16);
+            this.label4.Size = new System.Drawing.Size(113, 29);
             this.label4.TabIndex = 10;
             this.label4.Text = "Unknown";
             this.label4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MouseDownDrag);
@@ -266,15 +266,15 @@
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.labelAboutInfo);
-            this.panel1.Location = new System.Drawing.Point(13, 26);
+            this.panel1.Location = new System.Drawing.Point(13, 22);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(403, 272);
+            this.panel1.Size = new System.Drawing.Size(403, 276);
             this.panel1.TabIndex = 14;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MouseDownDrag);
             // 
             // About
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.ClientSize = new System.Drawing.Size(429, 310);
