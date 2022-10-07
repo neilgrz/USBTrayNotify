@@ -98,7 +98,7 @@
             this.showHideToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.contextMenuStripTray.Name = "contextMenuStrip1";
-            this.contextMenuStripTray.Size = new System.Drawing.Size(221, 76);
+            this.contextMenuStripTray.Size = new System.Drawing.Size(285, 114);
             this.contextMenuStripTray.Text = "USBTrayNotify";
             // 
             // showHideToolStripMenuItem
@@ -106,7 +106,7 @@
             this.showHideToolStripMenuItem.AutoSize = false;
             this.showHideToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
             this.showHideToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.showHideToolStripMenuItem.Image = global::USBTrayNotify.Properties.Resources.USBTrayNotifyMinForm;
+            this.showHideToolStripMenuItem.Image = global::USBTrayNotify.Properties.Resources.ShowHide;
             this.showHideToolStripMenuItem.Margin = new System.Windows.Forms.Padding(1, 3, 1, 3);
             this.showHideToolStripMenuItem.Name = "showHideToolStripMenuItem";
             this.showHideToolStripMenuItem.Size = new System.Drawing.Size(154, 30);
