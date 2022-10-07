@@ -92,19 +92,24 @@
             // contextMenuStripTray
             // 
             this.contextMenuStripTray.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
-            this.contextMenuStripTray.ImageScalingSize = new System.Drawing.Size(32, 32);
+            this.contextMenuStripTray.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.contextMenuStripTray.ImageScalingSize = new System.Drawing.Size(30, 30);
             this.contextMenuStripTray.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.showHideToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.contextMenuStripTray.Name = "contextMenuStrip1";
-            this.contextMenuStripTray.Size = new System.Drawing.Size(188, 76);
+            this.contextMenuStripTray.Size = new System.Drawing.Size(221, 76);
             this.contextMenuStripTray.Text = "USBTrayNotify";
             // 
             // showHideToolStripMenuItem
             // 
-            this.showHideToolStripMenuItem.BackColor = System.Drawing.SystemColors.Control;
+            this.showHideToolStripMenuItem.AutoSize = false;
+            this.showHideToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
+            this.showHideToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.showHideToolStripMenuItem.Image = global::USBTrayNotify.Properties.Resources.USBTrayNotifyMinForm;
+            this.showHideToolStripMenuItem.Margin = new System.Windows.Forms.Padding(1, 3, 1, 3);
             this.showHideToolStripMenuItem.Name = "showHideToolStripMenuItem";
-            this.showHideToolStripMenuItem.Size = new System.Drawing.Size(187, 36);
+            this.showHideToolStripMenuItem.Size = new System.Drawing.Size(154, 30);
             this.showHideToolStripMenuItem.Text = "Show/Hide";
             this.showHideToolStripMenuItem.Click += new System.EventHandler(this.showHideToolStripMenuItem_Click);
             this.showHideToolStripMenuItem.MouseEnter += new System.EventHandler(this.showHideToolStripMenuItem_MouseEnter);
@@ -112,11 +117,14 @@
             // 
             // exitToolStripMenuItem
             // 
-            this.exitToolStripMenuItem.BackColor = System.Drawing.SystemColors.Control;
-            this.exitToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitToolStripMenuItem.AutoSize = false;
+            this.exitToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
+            this.exitToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.exitToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.exitToolStripMenuItem.Image = global::USBTrayNotify.Properties.Resources.USBTrayNotifyCloseFormBg;
+            this.exitToolStripMenuItem.Margin = new System.Windows.Forms.Padding(1, 3, 1, 3);
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(187, 36);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(154, 30);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.MenuExit_Click);
             this.exitToolStripMenuItem.MouseEnter += new System.EventHandler(this.pictureBoxCloseFormBg_MouseEnter);
@@ -140,19 +148,23 @@
             // contextMenuStripForm
             // 
             this.contextMenuStripForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
-            this.contextMenuStripForm.ImageScalingSize = new System.Drawing.Size(28, 28);
+            this.contextMenuStripForm.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contextMenuStripForm.ImageScalingSize = new System.Drawing.Size(30, 30);
             this.contextMenuStripForm.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toTrayToolStripMenuItem,
             this.exitToolStripMenuItem1});
             this.contextMenuStripForm.Name = "contextMenuStripForm";
-            this.contextMenuStripForm.Size = new System.Drawing.Size(124, 76);
+            this.contextMenuStripForm.Size = new System.Drawing.Size(150, 76);
             // 
             // toTrayToolStripMenuItem
             // 
-            this.toTrayToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toTrayToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toTrayToolStripMenuItem.AutoSize = false;
+            this.toTrayToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
+            this.toTrayToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toTrayToolStripMenuItem.Image = global::USBTrayNotify.Properties.Resources.USBTrayNotifyMinForm;
+            this.toTrayToolStripMenuItem.Margin = new System.Windows.Forms.Padding(1, 3, 1, 3);
             this.toTrayToolStripMenuItem.Name = "toTrayToolStripMenuItem";
-            this.toTrayToolStripMenuItem.Size = new System.Drawing.Size(123, 36);
+            this.toTrayToolStripMenuItem.Size = new System.Drawing.Size(154, 30);
             this.toTrayToolStripMenuItem.Text = "Tray";
             this.toTrayToolStripMenuItem.Click += new System.EventHandler(this.pictureBoxMin_Click);
             this.toTrayToolStripMenuItem.MouseEnter += new System.EventHandler(this.pictureBoxMin_MouseEnter);
@@ -160,9 +172,12 @@
             // 
             // exitToolStripMenuItem1
             // 
-            this.exitToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.exitToolStripMenuItem1.AutoSize = false;
+            this.exitToolStripMenuItem1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitToolStripMenuItem1.Image = global::USBTrayNotify.Properties.Resources.USBTrayNotifyCloseFormBg;
+            this.exitToolStripMenuItem1.Margin = new System.Windows.Forms.Padding(1, 3, 1, 3);
             this.exitToolStripMenuItem1.Name = "exitToolStripMenuItem1";
-            this.exitToolStripMenuItem1.Size = new System.Drawing.Size(123, 36);
+            this.exitToolStripMenuItem1.Size = new System.Drawing.Size(154, 30);
             this.exitToolStripMenuItem1.Text = "Exit";
             this.exitToolStripMenuItem1.Click += new System.EventHandler(this.MenuExit_Click);
             this.exitToolStripMenuItem1.MouseEnter += new System.EventHandler(this.pictureBoxCloseFormBg_MouseEnter);
@@ -267,7 +282,7 @@
             this.pictureBoxStatus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBoxStatus.TabIndex = 5;
             this.pictureBoxStatus.TabStop = false;
-            this.pictureBoxStatus.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MouseDownDrag);
+            this.pictureBoxStatus.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MouseDownDragButton);
             // 
             // toolTipForm1
             // 
@@ -401,7 +416,7 @@
             this.label1.Location = new System.Drawing.Point(355, 396);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 25);
-            this.label1.TabIndex = 18;
+            this.label1.TabIndex = 1;
             this.label1.Text = "Clear";
             this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MouseDownDrag);
             // 
@@ -414,7 +429,7 @@
             this.label4.Location = new System.Drawing.Point(434, 396);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(93, 25);
-            this.label4.TabIndex = 20;
+            this.label4.TabIndex = 2;
             this.label4.Text = "Options";
             this.label4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MouseDownDrag);
             // 
@@ -478,7 +493,6 @@
         private System.ComponentModel.BackgroundWorker backgroundWorkerUSBLog;
         public System.Windows.Forms.NotifyIcon notifyIconConnected;
         public System.Windows.Forms.NotifyIcon notifyIconDisconnected;
-        public System.Windows.Forms.ContextMenuStrip contextMenuStripTray;
         public System.Windows.Forms.NotifyIcon notifyIconUnknown;
         public System.Windows.Forms.Label labelDeviceSelected;
         public System.Windows.Forms.ListBox listBox1;
@@ -504,6 +518,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBoxOptions;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStripTray;
     }
 }
 

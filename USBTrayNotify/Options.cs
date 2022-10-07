@@ -20,9 +20,26 @@ namespace USBTrayNotify
         }
         private void Options_Load(object sender, EventArgs e)
         {
+            contextMenuStripOptions.Renderer = contextMenuStripOptions.Renderer = new NewRenderer();
             CheckBoxStartOnWindows(); CheckBoxStartMenuShorts(); CheckBoxOnNew();
         }
 
+        //Context menu colors
+        private class NewRenderer : ToolStripProfessionalRenderer
+        {
+            public NewRenderer() : base(new NewColors()) { }
+        }
+        private class NewColors : ProfessionalColorTable
+        {
+            public override Color MenuItemSelected
+            {
+                get { return Color.Gainsboro; }
+            }
+            public override Color MenuItemBorder
+            {
+                get { return Color.Gray; }
+            }
+        }
 
         //Border
         protected override void OnPaint(PaintEventArgs e)
@@ -52,6 +69,16 @@ namespace USBTrayNotify
             {
                 ReleaseCapture();
                 SendMessage(Handle, 161, 2, 0);
+            }
+        }
+        private void MouseDownDragButton(object sender, MouseEventArgs e)
+        {
+            base.OnMouseDown(e);
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(Handle, 161, 2, 0);
+                contextMenuStripOptions.Show(PointToScreen(e.Location));
             }
         }
 

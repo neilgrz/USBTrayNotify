@@ -45,7 +45,7 @@ namespace USBTrayNotify
             //CustomDevicesFile = "USBTrayNotifyCustomDevices.dat";
             USBFriendlyName = Properties.USBTrayNotify.Default.USBFriendlyName;
             ShowOnNew = Properties.USBTrayNotify.Default.ShowOnNew;
-            //contextMenuStripForm.Renderer = contextMenuStripTray.Renderer = new NewRenderer();
+            contextMenuStripForm.Renderer = contextMenuStripTray.Renderer = new NewRenderer();
 
             ListboxLoad(); CheckBoxOnNew(); CheckBoxStartOnWindows(); CheckBoxStartMenuShorts(); SetStatus();
 
@@ -155,18 +155,22 @@ namespace USBTrayNotify
             Exit();
         }
 
-        ////Context menu colors
-        //private class NewRenderer : ToolStripProfessionalRenderer
-        //{
-        //    public NewRenderer() : base(new NewColors()) { }
-        //}
-        //private class NewColors : ProfessionalColorTable
-        //{
-        //    public override Color MenuItemSelected
-        //    {
-        //        get { return Color.Gainsboro; }
-        //    }
-        //}
+        //Context menu colors
+        private class NewRenderer : ToolStripProfessionalRenderer
+        {
+            public NewRenderer() : base(new NewColors()) { }
+        }
+        private class NewColors : ProfessionalColorTable
+        {
+            public override Color MenuItemSelected
+            {
+                get { return Color.Gainsboro; }
+            }
+            public override Color MenuItemBorder
+            {
+                get { return Color.Gray; }
+            }
+        }
 
         //Minimize on taskbar icon click when active
         const int WS_MINIMIZEBOX = 0x20000;
@@ -204,6 +208,17 @@ namespace USBTrayNotify
             {
                 ReleaseCapture();
                 SendMessage(Handle, 161, 2, 0);
+            }
+        }
+
+        private void MouseDownDragButton(object sender, MouseEventArgs e)
+        {
+            base.OnMouseDown(e);
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(Handle, 161, 2, 0);
+                contextMenuStripForm.Show(PointToScreen(e.Location));
             }
         }
 
@@ -630,5 +645,8 @@ namespace USBTrayNotify
         {
             pictureBoxOptions.Image = global::USBTrayNotify.Properties.Resources.USBTrayNotifyOptions;
         }
+
+
+
     }
 }

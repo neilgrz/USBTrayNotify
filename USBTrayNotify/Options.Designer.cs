@@ -50,18 +50,21 @@
             // 
             // contextMenuStripOptions
             // 
-            this.contextMenuStripOptions.ImageScalingSize = new System.Drawing.Size(28, 28);
+            this.contextMenuStripOptions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
+            this.contextMenuStripOptions.ImageScalingSize = new System.Drawing.Size(30, 30);
             this.contextMenuStripOptions.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.exitToolStripMenuItem});
             this.contextMenuStripOptions.Name = "contextMenuStrip1";
-            this.contextMenuStripOptions.Size = new System.Drawing.Size(169, 60);
+            this.contextMenuStripOptions.Size = new System.Drawing.Size(164, 40);
             // 
             // exitToolStripMenuItem
             // 
+            this.exitToolStripMenuItem.AutoSize = false;
+            this.exitToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.exitToolStripMenuItem.Image = global::USBTrayNotify.Properties.Resources.USBTrayNotifyCloseFormBg;
-            this.exitToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.exitToolStripMenuItem.Margin = new System.Windows.Forms.Padding(1, 3, 1, 3);
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(168, 56);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(154, 30);
             this.exitToolStripMenuItem.Text = "Close";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             this.exitToolStripMenuItem.MouseEnter += new System.EventHandler(this.pictureBoxCloseOptions_MouseEnter);
@@ -151,7 +154,7 @@
             this.pictureBoxOptionsMain.Size = new System.Drawing.Size(50, 50);
             this.pictureBoxOptionsMain.TabIndex = 4;
             this.pictureBoxOptionsMain.TabStop = false;
-            this.pictureBoxOptionsMain.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MouseDownDrag);
+            this.pictureBoxOptionsMain.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MouseDownDragButton);
             // 
             // labelOptionsBarTop
             // 
