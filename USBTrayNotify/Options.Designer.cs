@@ -56,7 +56,7 @@
             this.contextMenuStripOptions.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.exitToolStripMenuItem});
             this.contextMenuStripOptions.Name = "contextMenuStrip1";
-            this.contextMenuStripOptions.Size = new System.Drawing.Size(164, 40);
+            this.contextMenuStripOptions.Size = new System.Drawing.Size(285, 78);
             // 
             // exitToolStripMenuItem
             // 
@@ -65,7 +65,7 @@
             this.exitToolStripMenuItem.Image = global::USBTrayNotify.Properties.Resources.USBTrayNotifyCloseFormBg;
             this.exitToolStripMenuItem.Margin = new System.Windows.Forms.Padding(1, 3, 1, 3);
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(154, 30);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(122, 30);
             this.exitToolStripMenuItem.Text = "Close";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             this.exitToolStripMenuItem.MouseEnter += new System.EventHandler(this.pictureBoxCloseOptions_MouseEnter);
