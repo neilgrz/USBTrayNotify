@@ -56,6 +56,7 @@ namespace USBTrayNotify
                 PSI.FileName = USBLogViewExePath;
                 PSI.WorkingDirectory = Application.StartupPath;
                 Process.Start(PSI);
+                RefreshTray.RefreshTraybar();
                 Console.WriteLine("PSI.WorkingDirectory: " + PSI.WorkingDirectory);
             }
         }
