@@ -104,7 +104,7 @@
             this.showHideToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.contextMenuStripTray.Name = "contextMenuStrip1";
-            this.contextMenuStripTray.Size = new System.Drawing.Size(221, 76);
+            this.contextMenuStripTray.Size = new System.Drawing.Size(285, 114);
             this.contextMenuStripTray.Text = "USBTrayNotify";
             // 
             // showHideToolStripMenuItem
@@ -170,7 +170,7 @@
             this.toTrayToolStripMenuItem.Image = global::USBTrayNotify.Properties.Resources.USBTrayNotifyMinForm;
             this.toTrayToolStripMenuItem.Margin = new System.Windows.Forms.Padding(1, 3, 1, 3);
             this.toTrayToolStripMenuItem.Name = "toTrayToolStripMenuItem";
-            this.toTrayToolStripMenuItem.Size = new System.Drawing.Size(154, 30);
+            this.toTrayToolStripMenuItem.Size = new System.Drawing.Size(116, 30);
             this.toTrayToolStripMenuItem.Text = "Tray";
             this.toTrayToolStripMenuItem.Click += new System.EventHandler(this.pictureBoxMin_Click);
             this.toTrayToolStripMenuItem.MouseEnter += new System.EventHandler(this.pictureBoxMin_MouseEnter);
@@ -183,7 +183,7 @@
             this.exitToolStripMenuItem1.Image = global::USBTrayNotify.Properties.Resources.USBTrayNotifyCloseFormBg;
             this.exitToolStripMenuItem1.Margin = new System.Windows.Forms.Padding(1, 3, 1, 3);
             this.exitToolStripMenuItem1.Name = "exitToolStripMenuItem1";
-            this.exitToolStripMenuItem1.Size = new System.Drawing.Size(154, 30);
+            this.exitToolStripMenuItem1.Size = new System.Drawing.Size(116, 30);
             this.exitToolStripMenuItem1.Text = "Exit";
             this.exitToolStripMenuItem1.Click += new System.EventHandler(this.MenuExit_Click);
             this.exitToolStripMenuItem1.MouseEnter += new System.EventHandler(this.pictureBoxCloseFormBg_MouseEnter);
