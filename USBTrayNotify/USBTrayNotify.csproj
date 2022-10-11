@@ -144,6 +144,11 @@
     <None Include="Icons\form\USBTrayNotifyOptions.png" />
     <None Include="Icons\form\USBTrayNotifyOptionsHov.png" />
     <None Include="Icons\form\USBTrayNotifyCloseFormBg.png" />
+    <None Include="Icons\yes.png" />
+    <None Include="Icons\no.png" />
+    <None Include="Icons\options_startwithw.png" />
+    <None Include="Icons\options_addshortc.png" />
+    <None Include="Icons\options_show.png" />
     <Content Include="USBconnectedNC.ico" />
     <None Include="USBLogView\USBLogView.cfg" />
     <None Include="USBLogView\USBLogView.exe" />
@@ -152,7 +157,6 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>USBTrayNotify.Designer.cs</LastGenOutput>
     </None>
-    <Content Include="1Notes.txt" />
     <Content Include="Icons\form\USBconnected.png" />
     <Content Include="Icons\form\USBdisconnected.png" />
     <None Include="Icons\form\USBTrayNotifyAbout.png" />

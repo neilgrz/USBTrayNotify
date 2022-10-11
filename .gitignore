@@ -363,3 +363,6 @@ MigrationBackup/
 FodyWeavers.xsd
 /USBTrayNotify/1Notes.txt
 /USBTrayNotify.png
+/USBTrayNotify/AreYouSure.cs
+/USBTrayNotify/AreYouSure.Designer.cs
+/USBTrayNotify/AreYouSure.resx

@@ -87,10 +87,7 @@ namespace USBTrayNotify
         {
             Hide();
         }
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Hide();
-        }
+
 
         //Mouse hover
         private void pictureBoxCloseOptions_MouseEnter(object sender, EventArgs e)

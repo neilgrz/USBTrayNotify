@@ -495,6 +495,7 @@ namespace USBTrayNotify
             this.Icon = Properties.Resources.USBunknownNC;
         }
 
+
         //Custom Add and Clear list
         //private void buttonCustomAdd_Click(object sender, EventArgs e)
         //{
@@ -503,12 +504,14 @@ namespace USBTrayNotify
 
         private void buttonClearList_Click(object sender, EventArgs e)
         {
-            listBox1.Items.Clear();
-            File.WriteAllText(DeviceSelectFile, String.Empty);
-            //File.WriteAllText(CustomDevicesFile, String.Empty);
-            listBox1.Items.AddRange(new object[] { "No Device" });
-            listBox1.Text = "No Device";
+                listBox1.Items.Clear();
+                File.WriteAllText(DeviceSelectFile, String.Empty);
+                //File.WriteAllText(CustomDevicesFile, String.Empty);
+                listBox1.Items.AddRange(new object[] { "No Device" });
+                listBox1.Text = "No Device";
         }
+
+
 
         //About
         About _AboutForm = new About();

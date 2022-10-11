@@ -64,7 +64,7 @@
             this.labelTitleAbout.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTitleAbout.Location = new System.Drawing.Point(189, 4);
             this.labelTitleAbout.Name = "labelTitleAbout";
-            this.labelTitleAbout.Size = new System.Drawing.Size(75, 30);
+            this.labelTitleAbout.Size = new System.Drawing.Size(41, 15);
             this.labelTitleAbout.TabIndex = 0;
             this.labelTitleAbout.Text = "About";
             this.labelTitleAbout.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MouseDownDrag);
@@ -92,7 +92,7 @@
             this.labelAboutInfo.Location = new System.Drawing.Point(137, 27);
             this.labelAboutInfo.Name = "labelAboutInfo";
             this.labelAboutInfo.Padding = new System.Windows.Forms.Padding(1);
-            this.labelAboutInfo.Size = new System.Drawing.Size(212, 78);
+            this.labelAboutInfo.Size = new System.Drawing.Size(121, 44);
             this.labelAboutInfo.TabIndex = 2;
             this.labelAboutInfo.Text = "USB Tray Notify\r\n        v1.0.0";
             this.labelAboutInfo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MouseDownDrag);
@@ -104,7 +104,7 @@
             this.linkLabelAbout.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabelAbout.Location = new System.Drawing.Point(92, 245);
             this.linkLabelAbout.Name = "linkLabelAbout";
-            this.linkLabelAbout.Size = new System.Drawing.Size(437, 31);
+            this.linkLabelAbout.Size = new System.Drawing.Size(245, 17);
             this.linkLabelAbout.TabIndex = 0;
             this.linkLabelAbout.TabStop = true;
             this.linkLabelAbout.Text = "https://github.com/neilgrz/USBTrayNotify";
@@ -125,7 +125,7 @@
             this.contextMenuStripAbout.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.exitToolStripMenuItem});
             this.contextMenuStripAbout.Name = "contextMenuStrip1";
-            this.contextMenuStripAbout.Size = new System.Drawing.Size(285, 78);
+            this.contextMenuStripAbout.Size = new System.Drawing.Size(124, 40);
             // 
             // exitToolStripMenuItem
             // 
@@ -136,7 +136,7 @@
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(122, 30);
             this.exitToolStripMenuItem.Text = "Close";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.pictureBoxCloseAbout_Click);
             this.exitToolStripMenuItem.MouseEnter += new System.EventHandler(this.pictureBoxCloseAbout_MouseEnter);
             this.exitToolStripMenuItem.MouseLeave += new System.EventHandler(this.pictureBoxCloseAbout_MouseLeave);
             // 
@@ -167,7 +167,7 @@
             this.pictureBox2.Image = global::USBTrayNotify.Properties.Resources.USBconnectedSM;
             this.pictureBox2.Location = new System.Drawing.Point(94, 130);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(52, 50);
+            this.pictureBox2.Size = new System.Drawing.Size(50, 50);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox2.TabIndex = 5;
             this.pictureBox2.TabStop = false;
@@ -179,7 +179,7 @@
             this.pictureBox3.Image = global::USBTrayNotify.Properties.Resources.USBdisconnectedSM;
             this.pictureBox3.Location = new System.Drawing.Point(187, 130);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(52, 50);
+            this.pictureBox3.Size = new System.Drawing.Size(50, 50);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox3.TabIndex = 6;
             this.pictureBox3.TabStop = false;
@@ -191,7 +191,7 @@
             this.pictureBox4.Image = global::USBTrayNotify.Properties.Resources.USBunkownSM;
             this.pictureBox4.Location = new System.Drawing.Point(281, 130);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(52, 50);
+            this.pictureBox4.Size = new System.Drawing.Size(50, 50);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox4.TabIndex = 7;
             this.pictureBox4.TabStop = false;
@@ -204,7 +204,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(83, 184);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(130, 29);
+            this.label2.Size = new System.Drawing.Size(72, 16);
             this.label2.TabIndex = 8;
             this.label2.Text = "Connected";
             this.label2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MouseDownDrag);
@@ -216,7 +216,7 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(170, 184);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(160, 29);
+            this.label3.Size = new System.Drawing.Size(90, 16);
             this.label3.TabIndex = 9;
             this.label3.Text = "Disconnected";
             this.label3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MouseDownDrag);
@@ -228,7 +228,7 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(277, 184);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(113, 29);
+            this.label4.Size = new System.Drawing.Size(62, 16);
             this.label4.TabIndex = 10;
             this.label4.Text = "Unknown";
             this.label4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MouseDownDrag);
@@ -274,7 +274,7 @@
             // 
             // About
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.ClientSize = new System.Drawing.Size(429, 310);

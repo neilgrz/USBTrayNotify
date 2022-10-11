@@ -87,10 +87,6 @@ namespace USBTrayNotify
             Process.Start("https://github.com/neilgrz/USBTrayNotify");
         }
 
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Hide();
-        }
 
         //Mouse hover
         private void pictureBoxCloseAbout_MouseEnter(object sender, EventArgs e)
