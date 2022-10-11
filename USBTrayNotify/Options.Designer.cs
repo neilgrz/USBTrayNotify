@@ -40,9 +40,6 @@
             this.pictureBoxCloseOptions = new System.Windows.Forms.PictureBox();
             this.pictureBoxOptionsMain = new System.Windows.Forms.PictureBox();
             this.labelOptionsBarTop = new System.Windows.Forms.Label();
-            this.labelOptionsBarLeft = new System.Windows.Forms.Label();
-            this.labelOptionsBarRight = new System.Windows.Forms.Label();
-            this.labelAboutBarBottom = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.contextMenuStripOptions.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCloseOptions)).BeginInit();
@@ -85,12 +82,11 @@
             this.checkBoxStartWithWin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checkBoxStartWithWin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.857143F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxStartWithWin.Image = global::USBTrayNotify.Properties.Resources.options_startwithw;
-            this.checkBoxStartWithWin.Location = new System.Drawing.Point(102, 23);
+            this.checkBoxStartWithWin.Location = new System.Drawing.Point(126, 28);
             this.checkBoxStartWithWin.Name = "checkBoxStartWithWin";
-            this.checkBoxStartWithWin.Size = new System.Drawing.Size(210, 42);
+            this.checkBoxStartWithWin.Size = new System.Drawing.Size(162, 50);
             this.checkBoxStartWithWin.TabIndex = 0;
-            this.checkBoxStartWithWin.Text = "Start with Windows";
-            this.checkBoxStartWithWin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.checkBoxStartWithWin.Text = " Start with\r\n Windows";
             this.checkBoxStartWithWin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.toolTipOptions.SetToolTip(this.checkBoxStartWithWin, "Start USBTrayNotify when logging into Windows");
             this.checkBoxStartWithWin.UseVisualStyleBackColor = false;
@@ -102,11 +98,11 @@
             this.checkBoxStartMenuShorts.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checkBoxStartMenuShorts.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.857143F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxStartMenuShorts.Image = global::USBTrayNotify.Properties.Resources.options_addshortc;
-            this.checkBoxStartMenuShorts.Location = new System.Drawing.Point(102, 63);
+            this.checkBoxStartMenuShorts.Location = new System.Drawing.Point(126, 84);
             this.checkBoxStartMenuShorts.Name = "checkBoxStartMenuShorts";
-            this.checkBoxStartMenuShorts.Size = new System.Drawing.Size(210, 42);
+            this.checkBoxStartMenuShorts.Size = new System.Drawing.Size(173, 50);
             this.checkBoxStartMenuShorts.TabIndex = 1;
-            this.checkBoxStartMenuShorts.Text = "Start Menu shortcut";
+            this.checkBoxStartMenuShorts.Text = " Start Menu\r\n shortcut";
             this.checkBoxStartMenuShorts.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.toolTipOptions.SetToolTip(this.checkBoxStartMenuShorts, "Add or remove Start Menu shortcut for USBTrayNotify");
             this.checkBoxStartMenuShorts.UseVisualStyleBackColor = false;
@@ -118,13 +114,12 @@
             this.checkBoxShowOnNew.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checkBoxShowOnNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.857143F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxShowOnNew.Image = global::USBTrayNotify.Properties.Resources.options_show;
-            this.checkBoxShowOnNew.Location = new System.Drawing.Point(102, 102);
-            this.checkBoxShowOnNew.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.checkBoxShowOnNew.Location = new System.Drawing.Point(126, 140);
             this.checkBoxShowOnNew.Name = "checkBoxShowOnNew";
             this.checkBoxShowOnNew.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.checkBoxShowOnNew.Size = new System.Drawing.Size(210, 42);
+            this.checkBoxShowOnNew.Size = new System.Drawing.Size(173, 50);
             this.checkBoxShowOnNew.TabIndex = 2;
-            this.checkBoxShowOnNew.Text = "Show on new devices";
+            this.checkBoxShowOnNew.Text = " Show on\r\n new devices";
             this.checkBoxShowOnNew.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.toolTipOptions.SetToolTip(this.checkBoxShowOnNew, "Show USB Tray Notify window when new unknown devices are connected");
             this.checkBoxShowOnNew.UseVisualStyleBackColor = false;
@@ -177,32 +172,6 @@
             this.labelOptionsBarTop.TabIndex = 5;
             this.labelOptionsBarTop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MouseDownDrag);
             // 
-            // labelOptionsBarLeft
-            // 
-            this.labelOptionsBarLeft.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.labelOptionsBarLeft.Location = new System.Drawing.Point(13, 22);
-            this.labelOptionsBarLeft.Name = "labelOptionsBarLeft";
-            this.labelOptionsBarLeft.Size = new System.Drawing.Size(2, 175);
-            this.labelOptionsBarLeft.TabIndex = 12;
-            this.labelOptionsBarLeft.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MouseDownDrag);
-            // 
-            // labelOptionsBarRight
-            // 
-            this.labelOptionsBarRight.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.labelOptionsBarRight.Location = new System.Drawing.Point(415, 23);
-            this.labelOptionsBarRight.Name = "labelOptionsBarRight";
-            this.labelOptionsBarRight.Size = new System.Drawing.Size(2, 175);
-            this.labelOptionsBarRight.TabIndex = 16;
-            // 
-            // labelAboutBarBottom
-            // 
-            this.labelAboutBarBottom.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.labelAboutBarBottom.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.labelAboutBarBottom.Location = new System.Drawing.Point(13, 196);
-            this.labelAboutBarBottom.Name = "labelAboutBarBottom";
-            this.labelAboutBarBottom.Size = new System.Drawing.Size(404, 2);
-            this.labelAboutBarBottom.TabIndex = 17;
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -210,9 +179,9 @@
             this.panel1.Controls.Add(this.checkBoxStartWithWin);
             this.panel1.Controls.Add(this.checkBoxShowOnNew);
             this.panel1.Controls.Add(this.checkBoxStartMenuShorts);
-            this.panel1.Location = new System.Drawing.Point(13, 22);
+            this.panel1.Location = new System.Drawing.Point(12, 22);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(403, 176);
+            this.panel1.Size = new System.Drawing.Size(404, 227);
             this.panel1.TabIndex = 18;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MouseDownDrag);
             // 
@@ -221,13 +190,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
-            this.ClientSize = new System.Drawing.Size(429, 211);
+            this.ClientSize = new System.Drawing.Size(429, 261);
             this.ContextMenuStrip = this.contextMenuStripOptions;
             this.Controls.Add(this.pictureBoxCloseOptions);
             this.Controls.Add(this.pictureBoxOptionsMain);
-            this.Controls.Add(this.labelAboutBarBottom);
-            this.Controls.Add(this.labelOptionsBarRight);
-            this.Controls.Add(this.labelOptionsBarLeft);
             this.Controls.Add(this.labelOptionsBarTop);
             this.Controls.Add(this.labelTitleOptions);
             this.Controls.Add(this.panel1);
@@ -259,12 +225,9 @@
         private System.Windows.Forms.PictureBox pictureBoxCloseOptions;
         private System.Windows.Forms.PictureBox pictureBoxOptionsMain;
         private System.Windows.Forms.Label labelOptionsBarTop;
-        private System.Windows.Forms.Label labelOptionsBarLeft;
         private System.Windows.Forms.CheckBox checkBoxStartWithWin;
         private System.Windows.Forms.CheckBox checkBoxStartMenuShorts;
         private System.Windows.Forms.CheckBox checkBoxShowOnNew;
-        private System.Windows.Forms.Label labelOptionsBarRight;
-        private System.Windows.Forms.Label labelAboutBarBottom;
         private System.Windows.Forms.Panel panel1;
     }
 }
