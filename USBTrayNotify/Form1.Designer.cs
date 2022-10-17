@@ -345,7 +345,7 @@
             // 
             this.pictureBoxOptions.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pictureBoxOptions.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBoxOptions.Image = global::USBTrayNotify.Properties.Resources.USBTrayNotifyOptions;
+            this.pictureBoxOptions.Image = global::USBTrayNotify.Properties.Resources.USBTrayNotifyOptionsHov;
             this.pictureBoxOptions.Location = new System.Drawing.Point(437, 345);
             this.pictureBoxOptions.Name = "pictureBoxOptions";
             this.pictureBoxOptions.Size = new System.Drawing.Size(50, 50);

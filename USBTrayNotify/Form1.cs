@@ -642,11 +642,11 @@ namespace USBTrayNotify
         }
         private void pictureBoxOptions_MouseEnter(object sender, EventArgs e)
         {
-            pictureBoxOptions.Image = global::USBTrayNotify.Properties.Resources.USBTrayNotifyOptionsHov;
+            pictureBoxOptions.Image = global::USBTrayNotify.Properties.Resources.USBTrayNotifyOptions;
         }
         private void pictureBoxOptions_MouseLeave(object sender, EventArgs e)
         {
-            pictureBoxOptions.Image = global::USBTrayNotify.Properties.Resources.USBTrayNotifyOptions;
+            pictureBoxOptions.Image = global::USBTrayNotify.Properties.Resources.USBTrayNotifyOptionsHov;
         }
     }
 }
